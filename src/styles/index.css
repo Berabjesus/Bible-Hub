@@ -15,6 +15,14 @@
 
 :root {
   --dark-1: #20202A;
+  --main-bg: #2F2F31;
 }
 
-/* Naviagtion Bar */
+body {
+  background: var(--main-bg);
+}
+
+.border_custom {
+  border: 3px dashed red;
+}
+
