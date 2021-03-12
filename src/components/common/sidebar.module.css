@@ -1,0 +1,22 @@
+.aside {
+  top: 44px;
+  height: 100vh;
+  padding: 2rem 0.5rem 0 0.5rem;
+  background: #20202A;
+}
+
+.aside  * {
+  color: white;
+  text-align: left;
+}
+
+.aside li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  padding: 0.5rem;
+}
+
+.button {
+  background: unset;
+  margin: 0;
+  padding: 0;
+}
