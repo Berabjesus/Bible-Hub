@@ -1,10 +1,16 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import itemCss from "./item.module.css";
 
 const Item = ({ description, image, title }) => {
   return (
-    <section
-      className={`d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 ${itemCss.wrapper} `}
+    <Link
+      className={`d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 ${itemCss.wrapper} `} to={
+        {
+          pathname: "/bible",
+          state: {description, image, title}
+        }
+      }
     >
       <div
         className={`w-100 h-100 ${itemCss.background}`}
@@ -19,7 +25,7 @@ const Item = ({ description, image, title }) => {
         <h4>{title}</h4>
         <p>{description}</p>
       </div>
-    </section>
+    </Link>
   );
 };
 export default Item;
