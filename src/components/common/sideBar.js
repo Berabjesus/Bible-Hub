@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import sideBarCss from './sidebar.module.css'
 
 export const SideBar = ({slide}) => {
+  const [ulState, setUlState] = React.useState('d-none')
+  React.useEffect(() => {
+    slide === 'slideLeft' ? setUlState('d-none') : setUlState('d-block')
+  }, [slide])
   return (
     <aside className={`position-fixed d-flex flex-column ${sideBarCss.aside} ${sideBarCss[slide]}`}>
-      <ul className='row'>
+      <ul className={`row ${ulState}`}>
         <li className='col-12 mb-5'>
           <p>Settings</p>
         </li>
