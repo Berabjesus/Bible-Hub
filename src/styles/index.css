@@ -1,0 +1,20 @@
+@import url('./reset.css');
+@import url('./fonts.css');
+
+/*
+*  CSS TABLE OF CONTENTS
+*
+*  1.0 - Global values
+*  2.0 - Naviagtion Bar
+*  3.0 - 
+*  4.0 - 
+*  5.0 - 
+*/
+
+/* Global values */
+
+:root {
+  --dark-1: #20202A;
+}
+
+/* Naviagtion Bar */

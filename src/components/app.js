@@ -1,9 +1,9 @@
 import React from 'react'
 import {Switch, Route } from 'react-router-dom';
-import Home from '../page/home'
-import User from '../page/user'
-import Error from '../page/error'
-import Navbar from './common/navbar'
+import Home from '../pages/home'
+import User from '../pages/user'
+import Error from '../pages/error'
+import Navbar from './common/navBar'
 
 function App() {
   return(
