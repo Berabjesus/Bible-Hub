@@ -3,6 +3,8 @@
   height: 100vh;
   padding: 2rem 0.5rem 0 0.5rem;
   background: #20202A;
+  transition: 1s all linear;
+  /* animation: show 1s linear forwards; */
 }
 
 .aside  * {
@@ -19,4 +21,12 @@
   background: unset;
   margin: 0;
   padding: 0;
+}
+
+.slideRight {
+  width: 50% !important;
+}
+
+.slideLeft {
+  width: 0 !important;
 }

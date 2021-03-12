@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import sideBarCss from './sidebar.module.css'
 
-export const SideBar = () => {
+export const SideBar = ({slide}) => {
   return (
-    <aside className={`position-fixed d-flex flex-column col-6 ${sideBarCss.aside}`}>
+    <aside className={`position-fixed d-flex flex-column ${sideBarCss.aside} ${sideBarCss[slide]}`}>
       <ul className='row'>
         <li className='col-12 mb-5'>
           <p>Settings</p>
