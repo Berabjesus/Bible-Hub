@@ -1,5 +1,6 @@
 header {
   top: 0;
+  z-index: 199;
   /* border: 3px solid #2F2F31; */
 }
 .display {

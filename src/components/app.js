@@ -10,7 +10,7 @@ function App() {
   return(
     <>
       <Navbar />
-      <div className='pt-5 mx-1 mt-1 bg-white'>
+      <div className='pt-5 mx-1 mt-1'>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/user" component={User} />
