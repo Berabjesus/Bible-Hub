@@ -7,7 +7,7 @@ import Bible from '../pages/bible'
 import Read from '../pages/read'
 import About from '../pages/about'
 import Error from '../pages/error'
-import Navbar from './common/navBar'
+import Navbar from './common/navbar'
 
 function App() {
   return(
