@@ -14,7 +14,7 @@
 /* Global values */
 
 :root {
-  --dark-1: #20202A;
+  --dark-1: #100C1A;
   --main-bg: #2F2F31;
 }
 
@@ -22,7 +22,14 @@ body {
   background: var(--main-bg);
 }
 
+main {
+  padding: 41px 0 0 0;
+}
+
 .border_custom {
   border: 3px dashed red;
 }
 
+.font-josefin {
+  font-family: 'Josefin Sans','Courier New', Courier, monospace;
+}

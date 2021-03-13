@@ -1,0 +1,15 @@
+.header, .footer {
+  position: relative;
+  z-index: 199;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+.description {
+  height: 100px;
+  overflow-y: auto;
+}
+
+.button {
+  background: unset;
+}

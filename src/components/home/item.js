@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import itemCss from "./item.module.css";
 
-const Item = ({ description, image, title }) => {
+const Item = ({ description, image, title, languages}) => {
   return (
     <Link
       className={`d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 ${itemCss.wrapper} `} to={
         {
           pathname: "/bible",
-          state: {description, image, title}
+          state: {description, image, title, languages}
         }
       }
     >
@@ -21,7 +21,7 @@ const Item = ({ description, image, title }) => {
         alt={`${title} image`}
         className={`${itemCss.image} mx-auto`}
       />
-      <div className={`d-flex flex-column w-100 py-1 ${itemCss.description} `}>
+      <div className={`d-flex flex-column w-100 py-1 font-josefin ${itemCss.description} `}>
         <h4>{title}</h4>
         <p>{description}</p>
       </div>

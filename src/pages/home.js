@@ -81,7 +81,7 @@ const Home = () => {
   return (
     <div className={`row align-items-start ${homeCss.main} border_custom`} >
       {sample.map(item => {
-        return <Item key={item.bible} description={item.description} image={item.imageUrl} title={item.title}/>
+        return <Item key={item.bible} description={item.description} image={item.imageUrl} title={item.title} languages={item.languages}/>
       })}
     </div>
   )
