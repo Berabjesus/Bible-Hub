@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux'
-import contentReducer from './contentReducer'
+import darkModeReducer from './darkModeReducer'
 
 const rootReducer = combineReducers({
-  content: contentReducer
+  darkMode: darkModeReducer
 })
 
 export default rootReducer

@@ -1,4 +1,4 @@
-import * as contentTypes from '../types/contentTypes'
+import * as contentTypes from '../types/darkModeTypes'
 
 export const setDark = (color) => {
   return {

@@ -19,11 +19,11 @@ const Home = () => {
   }
   console.log(data);
   React.useEffect(()=> {
-    getUserFollowers().then(result => {
-      setData(result)
-      // console.log(result);
+    // getUserFollowers().then(result => {
+    //   setData(result)
+    //   // console.log(result);
       
-    })
+    // })
   }, [])
 
   const sample = [{
@@ -85,6 +85,9 @@ const Home = () => {
         return <Item key={item.bible} description={item.description} image={item.imageUrl} title={item.title} languages={item.languages}/>
       })}
     </div>
+    // <div>
+    //   <h1>test</h1>
+    // </div>
   )
 }
 

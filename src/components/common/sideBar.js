@@ -6,7 +6,7 @@ import {setDark, setLite} from '../../actions/contentAction'
 
 export const SideBar = ({slide}) => {
   const [ulState, setUlState] = React.useState('d-none')
-  const contentBgColor = useSelector(state => state.content)
+  const contentBgColor = useSelector(state => state.darkMode)
   const dispatch = useDispatch()
   React.useEffect(() => {
     slide === 'slideLeft' ? setUlState('d-none') : setUlState('d-block')
