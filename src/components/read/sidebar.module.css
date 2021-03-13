@@ -1,13 +1,27 @@
 .aside {
   position: fixed;
+  z-index: 99;
   height: 90vh;
-  width: 60%;
+  transition: 0.2s all linear;
+  background: var(--dark-1);
+  border-right: 2px solid white;
 }
 
 .toggle {
   position: absolute;
-  right: -15px;
-  background: unset;
+  z-index: -1;
+  right: -28px;
+  background: var(--dark-1);;
   border: 2px solid white;
-  border-radius: 50%;
+  border-left: 2px solid var(--dark-1);
+  border-radius: 5px;
+}
+
+.slideRight {
+  width: 60% ;
+}
+
+.slideLeft {
+  width: 0;
+  padding: 0;
 }
