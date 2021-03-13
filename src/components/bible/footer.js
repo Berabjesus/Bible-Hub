@@ -29,24 +29,27 @@ const Footer = ({ description, title, languages }) => {
             icon={favorite}
             style={{ color: "White", fontSize: "25px" }}
           />
+          <small className='text-white d-block'>Favorite</small>
         </button>
         <Link
           to={{
             pathname: "/read",
             state: {title, languages },
           }}
-          className={`${footerCss.button} ${footerCss.read}`}
+          className={`${footerCss.button}`}
         >
           <FontAwesomeIcon
             icon={faBookOpen}
             style={{ color: "White", fontSize: "25px" }}
           />
+          <small className='text-white d-block'>Read</small>
         </Link>
         <button className={`${footerCss.button}`}>
           <FontAwesomeIcon
             icon={faTrashAlt}
             style={{ color: "White", fontSize: "25px" }}
           />
+          <small className='text-white d-block'>Delete</small>
         </button>
       </div>
     </footer>
