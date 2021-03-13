@@ -1,5 +1,13 @@
 .aside {
   position: fixed;
   height: 90vh;
-  width: 50%;
+  width: 60%;
+}
+
+.toggle {
+  position: absolute;
+  right: -15px;
+  background: unset;
+  border: 2px solid white;
+  border-radius: 50%;
 }
