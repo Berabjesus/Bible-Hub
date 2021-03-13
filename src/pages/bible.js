@@ -13,7 +13,7 @@ export const User = (props) => {
     <section className={`position-relative d-flex flex-column justify-content-between ${bibleCss.wrapper} `}>
       <Image image={image} title={title}/>
       <Header title={title} languages={languages} />
-      <Footer description={description} />
+      <Footer title={title} description={description} languages={languages}/>
     </section>
   );
 };

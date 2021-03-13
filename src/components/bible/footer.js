@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import footerCss from "./headerAndFooter.module.css";
-import { faBookOpen , faStar as faStarChecked } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookOpen,
+  faStar as faStarChecked,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faTrashAlt,
   faStar as faStarUnchecked,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer = ({ description }) => {
+const Footer = ({ description, title, languages }) => {
   const [favorite, setFavorite] = React.useState(faStarUnchecked);
   const handleFavoriteCheck = () => {
     favorite === faStarUnchecked
@@ -27,11 +30,17 @@ const Footer = ({ description }) => {
             style={{ color: "White", fontSize: "25px" }}
           />
         </button>
-        <Link to='/read' className={`${footerCss.button} ${footerCss.read}`}>
+        <Link
+          to={{
+            pathname: "/read",
+            state: {title, languages },
+          }}
+          className={`${footerCss.button} ${footerCss.read}`}
+        >
           <FontAwesomeIcon
-              icon={faBookOpen}
-              style={{ color: "White", fontSize: "25px" }}
-            />
+            icon={faBookOpen}
+            style={{ color: "White", fontSize: "25px" }}
+          />
         </Link>
         <button className={`${footerCss.button}`}>
           <FontAwesomeIcon
