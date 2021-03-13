@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import footerCss from "./headerAndFooter.module.css";
 import { faBookOpen , faStar as faStarChecked } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -26,12 +27,12 @@ const Footer = ({ description }) => {
             style={{ color: "White", fontSize: "25px" }}
           />
         </button>
-        <button className={`${footerCss.button}`}>
+        <Link to='/read' className={`${footerCss.button} ${footerCss.read}`}>
           <FontAwesomeIcon
               icon={faBookOpen}
               style={{ color: "White", fontSize: "25px" }}
             />
-        </button>
+        </Link>
         <button className={`${footerCss.button}`}>
           <FontAwesomeIcon
             icon={faTrashAlt}

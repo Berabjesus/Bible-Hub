@@ -1,6 +1,6 @@
 header {
   top: 0;
-  z-index: 199;
+  z-index: 299;
 }
 .display {
   background-color: var(--dark-1);
