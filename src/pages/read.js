@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../components/bible/header'
+import Sidebar from '../components/read/sidebar'
 
 const Read = props => {
   const { title, languages } = props.location && props.location.state;
 
   return (
     <section>
-      <Header title={title} languages={languages} />
+      < Sidebar/>
     </section>
   )
 }

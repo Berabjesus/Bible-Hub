@@ -34,7 +34,7 @@ const Footer = ({ description, title, languages }) => {
         <Link
           to={{
             pathname: "/read",
-            state: {title, languages },
+            state: {},
           }}
           className={`${footerCss.button}`}
         >
