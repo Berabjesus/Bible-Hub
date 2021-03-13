@@ -7,22 +7,23 @@ const Home = () => {
 
   const getUserFollowers = async () => {
     try {
-      const response = await fetch('https://thingproxy.freeboard.io/fetch/http://api.biblia.com/v1/bible/find.txt?key=9f977d096e4fe0b62fc7877ca6d0a64b', {
-        method: "GET",
-      })
+      // const response = await fetch('https://thingproxy.freeboard.io/fetch/http://api.biblia.com/v1/bible/find.txt?key=fd37d8f28e95d3be8cb4fbc37e15e18e', {
+      //   method: "GET",
+      // })
+      const response = await fetch('https://jsonplaceholder.typicode.com/users')
       const filtered = await response.json();
       return filtered;
     } catch (error) {
       return error;
     }
   }
-
+  console.log(data);
   React.useEffect(()=> {
-    // getUserFollowers().then(result => {
-    //   setData(result)
-    //   console.log(result);
+    getUserFollowers().then(result => {
+      setData(result)
+      // console.log(result);
       
-    // })
+    })
   }, [])
 
   const sample = [{

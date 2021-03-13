@@ -15,8 +15,10 @@ const Sidebar = () => {
       setArrowState(faArrowRight)
     } else {
       setSlide('slideRight') 
-      setContentState('d-flex')
       setArrowState(faArrowLeft)
+      setTimeout(() => {
+        setContentState('d-flex')
+      }, 300);
     }
   }
   return (

@@ -1,4 +1,6 @@
 import React from 'react'
+import {Provider} from 'react-redux'
+import store from '../store'
 import {Switch, Route } from 'react-router-dom';
 import Home from '../pages/home'
 import Bible from '../pages/bible'
@@ -9,9 +11,9 @@ import Navbar from './common/navBar'
 
 function App() {
   return(
-    <>
+    <Provider store={store}>
       <Navbar />
-      <main className='mx-1 mt-1'>
+      <main className='mt-1'>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/bible" component={Bible} />
@@ -20,7 +22,7 @@ function App() {
           <Route path="*" component={Error} />
         </Switch>
       </main>
-    </>
+    </Provider>
   )
 }
 

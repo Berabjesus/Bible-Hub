@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../components/read/sidebar'
+import Content from '../components/read/content'
 
 const Read = props => {
   const { title, languages } = props.location && props.location.state;
@@ -7,6 +8,7 @@ const Read = props => {
   return (
     <section>
       < Sidebar/>
+      < Content />
     </section>
   )
 }

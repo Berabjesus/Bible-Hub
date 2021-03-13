@@ -1,7 +1,7 @@
 .aside {
   position: fixed;
   z-index: 99;
-  height: 90vh;
+  height: 100vh;
   transition: 0.2s all linear;
   background: var(--dark-1);
   border-right: 2px solid white;
@@ -10,6 +10,7 @@
 .toggle {
   position: absolute;
   z-index: -1;
+  top: 40%;
   right: -28px;
   background: var(--dark-1);;
   border: 2px solid white;
