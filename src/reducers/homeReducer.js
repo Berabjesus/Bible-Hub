@@ -1,4 +1,4 @@
-import * as homeTypes from '../types/homeTypes'
+import * as homeTypes from '../types/homeType'
 
 const initialState = {
   loading: false,
@@ -8,18 +8,18 @@ const initialState = {
 
 const homeReducer = (state = initialState, action) =>{
   switch (action.type) {
-    case userType.FETCH_REQUEST:
+    case homeTypes.FETCH_REQUEST:
       return {
         ...state,
         loading: true,
       }
-    case userType.FETCH_SUCCESS:
+    case homeTypes.FETCH_SUCCESS:
       return {
         ...state,
         loading: false,
         bibles: action.payload,
       }
-    case userType.FETCH_FAIL: 
+    case homeTypes.FETCH_FAIL: 
       return {
         ...state,
         loading: false,

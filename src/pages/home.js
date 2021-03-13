@@ -1,6 +1,8 @@
 import React from 'react'
 import homeCss from './home.module.css'
 import Item from '../components/home/item'
+import {useDispatch, useSelector} from 'react-redux'
+import {fetchBibles} from '../actions/homeAction'
 
 const Home = () => {
   const [data, setData] = React.useState([1])
@@ -17,7 +19,13 @@ const Home = () => {
       return error;
     }
   }
+  const dispatch = useDispatch()
+  React.useEffect(()=> {
+    dispatch(fetchBibles())
+  },[])
   console.log(data);
+  const bibles = useSelector(state => state.home);
+
   React.useEffect(()=> {
     // getUserFollowers().then(result => {
     //   setData(result)
@@ -80,14 +88,16 @@ const Home = () => {
   }]
 
   return (
-    <div className={`row align-items-start ${homeCss.main} border_custom`} >
-      {sample.map(item => {
-        return <Item key={item.bible} description={item.description} image={item.imageUrl} title={item.title} languages={item.languages}/>
-      })}
-    </div>
-    // <div>
-    //   <h1>test</h1>
+    // <div className={`row align-items-start ${homeCss.main} border_custom`} >
+    //   {sample.map(item => {
+    //     return <Item key={item.bible} description={item.description} image={item.imageUrl} title={item.title} languages={item.languages}/>
+    //   })}
     // </div>
+    <div>
+      <h1>test</h1>
+      {bibles.loading ? <h1>Loading. . .</h1> : console.log(bibles.bibles)
+       }
+    </div>
   )
 }
 

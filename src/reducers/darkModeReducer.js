@@ -1,4 +1,4 @@
-import * as contentTypes from '../types/darkModeTypes'
+import * as contentTypes from '../types/darkModeType'
 
 const initialState = {
   background: 'white',

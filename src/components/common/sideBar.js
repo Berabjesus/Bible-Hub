@@ -2,7 +2,7 @@ import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom';
 import sideBarCss from './sidebar.module.css'
-import {setDark, setLite} from '../../actions/contentAction'
+import {setDark, setLite} from '../../actions/darkModeAction'
 
 export const SideBar = ({slide}) => {
   const [ulState, setUlState] = React.useState('d-none')
