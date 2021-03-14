@@ -20,11 +20,10 @@ export const passgaesFetchFail = (data) => {
   }
 }
 
-export const fetchPassages= (version) => {
+export const fetchContent= (version) => {
   return (dispatch) => {    
     dispatch(passgaesLoading())
-    // fetch('https://thingproxy.freeboard.io/fetch/http://api.biblia.com/v1/bible/find.txt?key=fd37d8f28e95d3be8cb4fbc37e15e18e')
-    fetch(`https://api.biblia.com/v1/bible/contents/${version}?key=fd37d8f28e95d3be8cb4fbc37e15e18e`)
+    fetch(`https://api.biblia.com/v1/bible/content/${version}.html.json?passage=${book}${chapter}&style=oneVersePerLine&formatting=all&fullText=false&key=fd37d8f28e95d3be8cb4fbc37e15e18e`)
       .then(response => response.json())
       .then(data => {
        dispatch(passgaesFetchSuccess(data))
