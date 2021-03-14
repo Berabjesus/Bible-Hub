@@ -10,6 +10,7 @@ const Sidebar = ({ id }) => {
   const [slide, setSlide] = React.useState("slideRight");
   const [contentState, setContentState] = React.useState("d-flex");
   const [arrowState, setArrowState] = React.useState(faArrowLeft);
+  const [chapters, setChapters] = React.useState([])
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.passage);
@@ -31,10 +32,15 @@ const Sidebar = ({ id }) => {
       }, 300);
     }
   };
+
+  const handleButtonClick = (chapters) => {
+    setChapters(chapters)
+  }
+
   return (
     <aside className={`row d-flex pb-5 ${sidebarCss.aside} ${sidebarCss[slide]}`}>
       <div className={`flex-column text-white col-9 ${sidebarCss.passage} ${contentState}`}>
-        <h6 className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">{id} Books</h6>
+        <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">{id} Books</small>
 
         {
           data.loading ? (
@@ -49,15 +55,20 @@ const Sidebar = ({ id }) => {
           ) : 
           (
           data.passages.books && data.passages.books.map((item) => {
-            return <button key={`${id}-${item.passage}`} className={`${sidebarCss.button}`}>{item.passage} </button>;
+            return <button key={`${id}-${item.passage}`} className={`${sidebarCss.button}`} onClick = {() => handleButtonClick(item.chapters)}>{item.passage} </button>;
           })
           )
         }
       </div>
       <div
-        className={`flex-column text-white text-center border-left border-light px-1 ${contentState}`}
+        className={`col-3 flex-column text-white text-center border-left border-light px-1 ${contentState} ${sidebarCss.passage}`}
       >
-        <small className="mx-auto">Ch</small>
+        <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">Ch</small>
+        {
+          chapters.map((chapter, index) => {
+            return <button key={`${chapter}-${index}`} className={`${sidebarCss.button}`}>{index + 1}</button>
+          })
+        }
       </div>
       <button
         className={` align-self-center ${sidebarCss.toggle}`}
