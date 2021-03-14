@@ -3,11 +3,11 @@ import Sidebar from '../components/read/sidebar'
 import Content from '../components/read/content'
 
 const Read = props => {
-  const { title, languages } = props.location && props.location.state;
-
+  const {id, title, languages } = props.location && props.location.state;
+  
   return (
     <section>
-      < Sidebar/>
+      < Sidebar id= {id}/>
       < Content />
     </section>
   )

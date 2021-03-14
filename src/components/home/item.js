@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import itemCss from "./item.module.css";
 
-const Item = ({ description, image, title, languages}) => {
+const Item = ({id, description, image, title, languages}) => {
   return (
     <Link
       className={`d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 ${itemCss.wrapper} `} to={
         {
           pathname: "/bible",
-          state: {description, image, title, languages}
+          state: {id, description, image, title, languages}
         }
       }
     >

@@ -11,13 +11,13 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer = ({ description, title, languages }) => {
+const Footer = ({ id, description, title, languages }) => {
   const [favorite, setFavorite] = React.useState(faStarUnchecked);
   const handleFavoriteCheck = () => {
     favorite === faStarUnchecked
       ? setFavorite(faStarChecked)
       : setFavorite(faStarUnchecked);
-  };
+  };  
   return (
     <footer className={`d-flex flex-column px-2 py-1 ${footerCss.footer}`}>
       <div className={`border-bottom border-white ${footerCss.description}`}>
@@ -34,7 +34,7 @@ const Footer = ({ description, title, languages }) => {
         <Link
           to={{
             pathname: "/read",
-            state: {},
+            state: {id},
           }}
           className={`${footerCss.button}`}
         >

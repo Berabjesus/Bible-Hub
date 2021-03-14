@@ -24,7 +24,7 @@ const Home = () => {
 
   const sample = [
     {
-      abbreviatedTitle: "DARBY",
+      abbreviatedTitle: "STEPHENS",
       bible: "darby",
       copyright: "Public Domain.",
       description:
@@ -91,13 +91,12 @@ const Home = () => {
 
   return (
     <div>
-      {/* <BoxLoading color='white' size='large' speed='1'/> */}
-      {data.loading ? (
+      {/* {data.loading ? (
         <span className={`${homeCss.centered}`}>
           <RotateSpinner size={80} color="white" loading={true} />;
         </span>
       ) : 
-      data.bibles.bibles && data.bibles.bibles.length === 0 && data.error.length > 0 ? (
+      data.error.length > 0 ? (
         <span className={`text-white ${homeCss.centered}`}>
           <h3>Error fetching data, Try again later</h3>
         </span>
@@ -116,7 +115,22 @@ const Home = () => {
             );
           })}
         </div>
-      )}
+      )} */}
+
+      <div className={`row align-items-start ${homeCss.main}`}>
+          {sample && sample.map((item) => {
+            return (
+              <Item
+                key={item.bible}
+                id={item.abbreviatedTitle}
+                description={item.description}
+                image={item.imageUrl}
+                title={item.title}
+                languages={item.languages}
+              />
+            );
+          })}
+        </div>
     </div>
   );
 };

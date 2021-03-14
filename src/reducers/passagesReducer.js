@@ -2,12 +2,11 @@ import * as loadType from '../types/loadType'
 
 const initialState = {
   loading: false,
-  bibles: [],
+  passages: {},
   error: '',
-  stored: false
 }
 
-const homeReducer = (state = initialState, action) =>{
+const passagesReducer = (state = initialState, action) =>{
   switch (action.type) {
     case loadType.FETCH_REQUEST:
       return {
@@ -18,8 +17,7 @@ const homeReducer = (state = initialState, action) =>{
       return {
         ...state,
         loading: false,
-        bibles: action.payload,
-        stored: true,
+        passages: action.payload,
       }
     case loadType.FETCH_FAIL: 
       return {
@@ -31,4 +29,4 @@ const homeReducer = (state = initialState, action) =>{
   }
 }
 
-export default homeReducer
+export default passagesReducer

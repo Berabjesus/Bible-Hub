@@ -7,6 +7,19 @@
   border-right: 2px solid white;
 }
 
+.passage {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.button {
+  color: whitesmoke;
+  background: unset;
+  border: 1px solid rgba(245, 245, 245, 0.171);
+  padding: 0 0 0.2rem 0;
+  margin: 0.2rem 0 0 0;
+}
+
 .toggle {
   position: absolute;
   z-index: -1;
@@ -25,4 +38,11 @@
 .slideLeft {
   width: 0;
   padding: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
