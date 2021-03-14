@@ -19,7 +19,7 @@
 }
 
 body {
-  background: var(--main-bg);
+  background-color: var(--dark-1);
 }
 
 main {

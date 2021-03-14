@@ -3,7 +3,8 @@ import * as homeTypes from '../types/homeType'
 const initialState = {
   loading: false,
   bibles: [],
-  error: ''
+  error: '',
+  stored: false
 }
 
 const homeReducer = (state = initialState, action) =>{
@@ -18,6 +19,7 @@ const homeReducer = (state = initialState, action) =>{
         ...state,
         loading: false,
         bibles: action.payload,
+        stored: true,
       }
     case homeTypes.FETCH_FAIL: 
       return {

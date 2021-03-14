@@ -23,7 +23,9 @@ export const biblesFetchFail = (data) => {
 export const fetchBibles= () => {
   return (dispatch) => {    
     dispatch(biblesLoading())
-    fetch('https://jsonplaceholder.typicode.com/users')
+    console.log('loading');
+    
+    fetch('https://thingproxy.freeboard.io/fetch/http://api.biblia.com/v1/bible/find.txt?key=fd37d8f28e95d3be8cb4fbc37e15e18e')
       .then(response => response.json())
       .then(data => {
         // console.log(data);
