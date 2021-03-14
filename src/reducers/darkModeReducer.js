@@ -1,4 +1,4 @@
-import * as contentTypes from '../types/darkModeType'
+import * as darkModeTypes from '../types/darkModeTypes'
 
 const initialState = {
   background: 'white',
@@ -7,13 +7,13 @@ const initialState = {
 
 const darkModeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case contentTypes.DARK:
+    case darkModeTypes.DARK:
       return {
         ...state,
         background: action.payload,
         color: 'white',
       }
-    case contentTypes.LITE:
+    case darkModeTypes.LITE:
       return {
         ...state,
         background: 'white',

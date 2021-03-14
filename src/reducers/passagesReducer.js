@@ -1,25 +1,27 @@
-import * as loadType from '../types/loadType'
+import * as passageTypes from '../types/passageTypes'
 
 const initialState = {
   loading: false,
   passages: {},
   error: '',
+  stored: false
 }
 
 const passagesReducer = (state = initialState, action) =>{
   switch (action.type) {
-    case loadType.FETCH_REQUEST:
+    case passageTypes.PASSAGE_FETCH_REQUEST:
       return {
         ...state,
         loading: true,
       }
-    case loadType.FETCH_SUCCESS:
+    case passageTypes.PASSAGE_FETCH_SUCCESS:
       return {
         ...state,
         loading: false,
         passages: action.payload,
+        stored: true
       }
-    case loadType.FETCH_FAIL: 
+    case passageTypes.PASSAGE_FETCH_FAIL: 
       return {
         ...state,
         loading: false,

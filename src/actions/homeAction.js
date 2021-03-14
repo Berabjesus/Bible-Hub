@@ -1,21 +1,21 @@
-import * as loadType from '../types/loadType'
+import * as homeTypes from '../types/homeTypes'
 
 export const biblesLoading = () => {
   return {
-    type: loadType.FETCH_REQUEST
+    type: homeTypes.BIBLE_VERSIONS_FETCH_REQUEST
   }
 }
 
 export const biblesFetchSuccess = (data) => {  
   return {
-    type: loadType.FETCH_SUCCESS,
+    type: homeTypes.BIBLE_VERSIONS_FETCH_SUCCESS,
     payload: data
   }
 }
 
 export const biblesFetchFail = (data) => {
   return {
-    type: loadType.FETCH_FAIL,
+    type: homeTypes.BIBLE_VERSIONS_FETCH_FAIL,
     payload:data
   }
 }

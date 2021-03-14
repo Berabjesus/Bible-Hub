@@ -1,29 +1,29 @@
-import * as loadType from '../types/loadType'
+import * as contentTypes from '../types/contentTypes'
 
 export const contentLoading = () => {
   return {
-    type: loadType.FETCH_REQUEST
+    type: contentTypes.CONTENT_FETCH_REQUEST
   }
 }
 
 export const contentFetchSuccess = (data) => {  
   return {
-    type: loadType.FETCH_SUCCESS,
+    type: contentTypes.CONTENT_FETCH_SUCCESS,
     payload: data
   }
 }
 
 export const contentFetchFail = (data) => {
   return {
-    type: loadType.FETCH_FAIL,
+    type: contentTypes.CONTENT_FETCH_FAIL,
     payload:data
   }
 }
 
-export const fetchPassages= (version) => {
+export const fetchContent= (version, passage ) => {
   return (dispatch) => {    
     dispatch(contentLoading())
-    fetch(`https://api.biblia.com/v1/bible/contents/${version}?key=fd37d8f28e95d3be8cb4fbc37e15e18e`)
+    fetch(`https://api.biblia.com/v1/bible/content/${version}.html.json?passage=${passage}&style=oneVersePerLine&formatting=all&fullText=false&key=fd37d8f28e95d3be8cb4fbc37e15e18e`)
       .then(response => response.json())
       .then(data => {
        dispatch(contentFetchSuccess(data))

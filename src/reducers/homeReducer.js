@@ -1,4 +1,4 @@
-import * as loadType from '../types/loadType'
+import * as homeTypes from '../types/homeTypes'
 
 const initialState = {
   loading: false,
@@ -9,19 +9,19 @@ const initialState = {
 
 const homeReducer = (state = initialState, action) =>{
   switch (action.type) {
-    case loadType.FETCH_REQUEST:
+    case homeTypes.BIBLE_VERSIONS_FETCH_REQUEST:
       return {
         ...state,
         loading: true,
       }
-    case loadType.FETCH_SUCCESS:
+    case homeTypes.BIBLE_VERSIONS_FETCH_SUCCESS:
       return {
         ...state,
         loading: false,
         bibles: action.payload,
         stored: true,
       }
-    case loadType.FETCH_FAIL: 
+    case homeTypes.BIBLE_VERSIONS_FETCH_FAIL: 
       return {
         ...state,
         loading: false,
