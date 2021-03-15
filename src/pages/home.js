@@ -11,15 +11,8 @@ const Home = () => {
   const data = useSelector((state) => state.home);
   React.useEffect(() => {
     if (!data.stored) {
-      // dispatch(fetchBibles())
+      dispatch(fetchBibles())
     }
-  }, []);
-  console.log(data.bibles.bibles);
-  React.useEffect(() => {
-    // getUserFollowers().then(result => {
-    //   setData(result)
-    //   // console.log(result);
-    // })
   }, []);
 
   const sample = [
@@ -91,7 +84,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* {data.loading ? (
+      {data.loading ? (
         <span className={`${homeCss.centered}`}>
           <RotateSpinner size={80} color="white" loading={true} />;
         </span>
@@ -107,6 +100,7 @@ const Home = () => {
             return (
               <Item
                 key={item.bible}
+                id={item.bible}
                 description={item.description}
                 image={item.imageUrl}
                 title={item.title}
@@ -115,9 +109,9 @@ const Home = () => {
             );
           })}
         </div>
-      )} */}
+      )}
 
-      <div className={`row align-items-start ${homeCss.main}`}>
+      {/* <div className={`row align-items-start ${homeCss.main}`}>
           {sample && sample.map((item) => {
             return (
               <Item
@@ -130,7 +124,7 @@ const Home = () => {
               />
             );
           })}
-        </div>
+        </div> */}
     </div>
   );
 };
