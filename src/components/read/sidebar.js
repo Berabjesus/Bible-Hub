@@ -7,7 +7,7 @@ import sidebarCss from './sidebar.module.css';
 import { fetchPassages } from '../../actions/passagesAction';
 import { fetchContent } from '../../actions/contentAction';
 
-const Sidebar = ({ id }) => {
+const Sidebar = ({ id, setInfo }) => {
   const [slide, setSlide] = React.useState('slideRight');
   const [contentState, setContentState] = React.useState('d-flex');
   const [arrowState, setArrowState] = React.useState(faArrowLeft);
@@ -44,15 +44,14 @@ const Sidebar = ({ id }) => {
   const handleChapterClick = (id, chapter) => {
     console.log(id, chapter);
     dispatch(fetchContent(id, chapter));
+    setInfo(chapter)
   };
 
   return (
     <aside className={`row d-flex pb-5 ${sidebarCss.aside} ${sidebarCss[slide]}`}>
       <div className={`flex-column text-white col-9 ${sidebarCss.passage} ${contentState}`}>
         <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">
-          {id}
-          {' '}
-          Books
+          {id}Books
         </small>
 
         {
@@ -71,7 +70,6 @@ const Sidebar = ({ id }) => {
                 data.passages.books && data.passages.books.map(item => (
                   <button key={`${id}-${item.passage}`} className={`${sidebarCss.button}`} onClick={() => handlePassageClick(item.chapters)}>
                     {item.passage}
-                    {' '}
                   </button>
                 ))
               )
