@@ -1,13 +1,14 @@
-import {combineReducers} from 'redux'
-import darkModeReducer from './darkModeReducer'
-import home from './homeReducer'
-import passagesReducer from './passagesReducer'
-import contentReducer from './contentReducer'
+import { combineReducers } from 'redux';
+import darkModeReducer from './darkModeReducer';
+import home from './homeReducer';
+import passagesReducer from './passagesReducer';
+import contentReducer from './contentReducer';
+
 const rootReducer = combineReducers({
   darkMode: darkModeReducer,
-  home: home,
+  home,
   passage: passagesReducer,
-  content: contentReducer
-})
+  content: contentReducer,
+});
 
-export default rootReducer
+export default rootReducer;

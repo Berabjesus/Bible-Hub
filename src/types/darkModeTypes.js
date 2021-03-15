@@ -1,2 +1,2 @@
-export const DARK = 'DARK'
-export const LITE = 'LITE'
+export const DARK = 'DARK';
+export const LITE = 'LITE';

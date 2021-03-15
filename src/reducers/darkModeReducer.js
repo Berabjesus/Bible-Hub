@@ -1,9 +1,9 @@
-import * as darkModeTypes from '../types/darkModeTypes'
+import * as darkModeTypes from '../types/darkModeTypes';
 
 const initialState = {
   background: 'white',
-  color: '#100C1A'
-}
+  color: '#100C1A',
+};
 
 const darkModeReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -12,14 +12,14 @@ const darkModeReducer = (state = initialState, action) => {
         ...state,
         background: action.payload,
         color: 'white',
-      }
+      };
     case darkModeTypes.LITE:
       return {
         ...state,
         background: 'white',
-        color: '#100C1A'
-      }
+        color: '#100C1A',
+      };
     default: return state;
   }
-}
+};
 export default darkModeReducer;
