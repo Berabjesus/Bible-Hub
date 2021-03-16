@@ -9,13 +9,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import footerCss from "./footer.module.css";
+import { setDark, setLite } from '../../actions/darkModeAction';
 
 const Footer = () => {
   const darkModeState = useSelector((state) => state.darkMode);
 
   const dispatch = useDispatch();
   const handledarkModeCheck = () => {
-    console.log('d');
+    if (darkModeState.background === 'white') {
+      dispatch(setDark('#100C1A'));
+    } else {
+      dispatch(setLite());
+    }
   }
     
       
