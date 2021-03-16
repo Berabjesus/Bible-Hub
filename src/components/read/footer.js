@@ -25,7 +25,7 @@ const Footer = () => {
     
       
   return (
-    <div className={`d-flex justify-content-between pr-2 pl-1 align-items-center ${footerCss.bottom}`}>
+    <div className={`d-flex justify-content-between py-4 pr-2 pl-1 align-items-center ${footerCss.bottom}`}>
       <button
         type="button"
         className={`${footerCss.button}`}
@@ -33,21 +33,21 @@ const Footer = () => {
       >
         <FontAwesomeIcon
           icon={darkModeState.background ==='white' ? (faMoonUnchecked) : (faMoonChecked)}
-          style={{ color: "White", fontSize: "25px" }}
+          style={{ color: "White", fontSize: "18px" }}
         />
-        <small className="text-white d-block">{darkModeState.background ==='white' ? 'Dark Mode' : 'Lite Mode'}</small>
+        <small className="text-white d-block">{darkModeState.background ==='white' ? 'Dark' : 'Lite'}</small>
       </button>
       <Link to="/" className="d-flex flex-column align-items-center">
         <FontAwesomeIcon
           icon={faHome}
-          style={{ color: "White", fontSize: "25px" }}
+          style={{ color: "White", fontSize: "18px" }}
         />
         <small>Home</small>
       </Link>
       <Link to="/favorites" className="d-flex flex-column align-items-center">
         <FontAwesomeIcon
           icon={faList}
-          style={{ color: "White", fontSize: "25px" }}
+          style={{ color: "White", fontSize: "18px" }}
         />
         <small>List</small>
       </Link>

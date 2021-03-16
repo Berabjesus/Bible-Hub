@@ -1,9 +1,11 @@
 .bottom {
   position: fixed;
   bottom: 0;
-  height: 50px;
+  left: -2px;
+  height: 40px;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid black;
+  border-right: unset;
   color: white;
   background-color: rgba(0, 0, 0, 0.349);
 }

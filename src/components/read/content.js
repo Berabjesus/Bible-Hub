@@ -27,7 +27,6 @@ const Content = ({ info }) => {
       {data.loading ? (
         <span className={`${contentCss.centered}`}>
           <RotateSpinner size={80} color={contentBgColor.color} loading />
-          ;
         </span>
       )
         : data.error.length > 0 ? (
@@ -41,6 +40,9 @@ const Content = ({ info }) => {
               <ToolTip style={toolTipProps} />
               {parse(data.content.text, {
                 replace(domNode) {
+                  if (domNode.children && domNode.children.length === 3) {
+                    domNode.attribs = {...domNode.attribs, class: contentCss.header}
+                  }
                   if (domNode.type === 'tag' && domNode.name === 'p' && domNode.children.length > 3) {
                     const verse = { ...{ ...domNode.children[2].children }['0'] }.data;
                     const verseNum = { ...{ ...domNode.children[1].children[0].children }['0'] }.data;
