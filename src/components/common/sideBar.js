@@ -2,8 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import sideBarCss from './sidebar.module.css';
+import { faMoon as faMoonUnchecked } from '@fortawesome/free-regular-svg-icons';
+import { faMoon as faMoonChecked } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { setDark, setLite } from '../../actions/darkModeAction';
+import sideBarCss from './sidebar.module.css';
 
 const SideBar = ({ slide }) => {
   const [ulState, setUlState] = React.useState('d-none');
@@ -27,7 +30,13 @@ const SideBar = ({ slide }) => {
           <p>Settings</p>
         </li>
         <li className="col-12">
-          <button type="button" className={`w-100 ${sideBarCss.button}`} onClick={handleDarkModeToggle}><small>Dark Mode</small></button>
+          <button type="button" className={`w-100 ${sideBarCss.button}`} onClick={handleDarkModeToggle}>
+            <span className="mr-2">Dark Mode</span>
+            <FontAwesomeIcon
+              icon={contentBgColor.background === 'white' ? (faMoonUnchecked) : (faMoonChecked)}
+              style={{ color: 'White', fontSize: '18px' }}
+            />
+          </button>
         </li>
         <li className="col-12">
           <Link to="/favorites"> Favorites </Link>

@@ -1,13 +1,12 @@
-/* eslint-disable no-nested-ternary, consistent-return */
+/* eslint-disable no-nested-ternary, consistent-return, no-param-reassign */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
 import { RotateSpinner } from 'react-spinners-kit';
-import PropTypes from 'prop-types';
 import contentCss from './content.module.css';
 import ToolTip from './tooltip';
 
-const Content = ({ info }) => {
+const Content = () => {
   const contentBgColor = useSelector(state => state.darkMode);
   const data = useSelector(state => state.content);
   const [toolTipProps, setToolTipProps] = React.useState({
@@ -25,12 +24,12 @@ const Content = ({ info }) => {
   return (
     <article className={`pl-3 pr-1 ${contentCss.article}`} style={contentBgColor}>
       {data.loading ? (
-        <span className={`${contentCss.centered}`}>
+        <span className="centered">
           <RotateSpinner size={80} color={contentBgColor.color} loading />
         </span>
       )
         : data.error.length > 0 ? (
-          <span className={`${contentCss.centered}`} style={{ color: contentBgColor.color }}>
+          <span className="centered" style={{ color: contentBgColor.color }}>
             <h3>Error fetching data, Try again later</h3>
           </span>
         )
@@ -41,7 +40,7 @@ const Content = ({ info }) => {
               {parse(data.content.text, {
                 replace(domNode) {
                   if (domNode.children && domNode.children.length === 3) {
-                    domNode.attribs = {...domNode.attribs, class: contentCss.header}
+                    domNode.attribs.class = contentCss.header;
                   }
                   if (domNode.type === 'tag' && domNode.name === 'p' && domNode.children.length > 3) {
                     const verse = { ...{ ...domNode.children[2].children }['0'] }.data;
@@ -59,14 +58,6 @@ const Content = ({ info }) => {
 
                       </p>
                     );
-
-                    // domNode.attribs = {...domNode.attribs, onClick: ()=>{
-                    //   let verseNum = {...{...domNode.children[1].children[a0].children}['0']}.data
-                    //   let verse = {...{...domNode.children[2].children}['0']}.data
-                    //   console.log(info, verseNum, verse);
-                    //   console.log(domNode);
-                    //   // domNode.attribs = {...domNode.attribs, class: contentCss.focus}
-                    // }}
                   }
                 },
               })}
@@ -75,10 +66,6 @@ const Content = ({ info }) => {
           )}
     </article>
   );
-};
-
-Content.propTypes = {
-  info: PropTypes.string.isRequired,
 };
 
 export default Content;
