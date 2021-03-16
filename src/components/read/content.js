@@ -22,7 +22,7 @@ const Content = () => {
     });
   };
   return (
-    <article className={`pl-3 pr-1 ${contentCss.article}`} style={contentBgColor}>
+    <article className={`pl-3 col-lg-8 mx-auto pr-1 ${contentCss.article}`} style={contentBgColor}>
       {data.loading ? (
         <span className="centered">
           <RotateSpinner size={80} color={contentBgColor.color} loading />

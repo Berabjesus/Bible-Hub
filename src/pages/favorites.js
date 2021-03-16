@@ -11,7 +11,6 @@ const Favorites = ({ history }) => (
         icon={faArrowLeft}
         style={{ color: 'White', fontSize: '25px' }}
       />
-      {' '}
       Go back
     </button>
   </div>

@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary */
+/* eslint-disable no-nested-ternary, max-len */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RotateSpinner } from 'react-spinners-kit';
@@ -8,28 +8,40 @@ import { fetchBibles } from '../actions/homeAction';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const data = useSelector(state => state.home);
+  const filteredData = useSelector(state => state.filtered);
+  const rawData = useSelector(state => state.home);
   React.useEffect(() => {
-    if (!data.stored) {
+    if (!rawData.stored) {
       dispatch(fetchBibles());
     }
   }, []);
   return (
     <div>
-      {data.loading ? (
+      {rawData.loading ? (
         <span className="centered">
           <RotateSpinner size={80} color="white" loading />
           ;
         </span>
       )
-        : data.error.length > 0 ? (
+        : rawData.error.length > 0 ? (
           <span className="text-white centered">
             <h3>Error fetching data, Try again later</h3>
           </span>
         )
           : (
             <div className={`row align-items-start ${homeCss.main}`}>
-              {data.bibles.bibles && data.bibles.bibles.map(item => (
+              {rawData.bibles.bibles && rawData.bibles.bibles.filter(item => {
+                if (filteredData === undefined || filteredData === null || filteredData.filterValue === '') {
+                  return item;
+                }
+                if (
+                  item.bible.toLowerCase().includes(filteredData.filterValue)
+                  || item.title.toLowerCase().includes(filteredData.filterValue)
+                ) {
+                  return item;
+                }
+                return false;
+              }).map(item => (
                 <Item
                   key={item.bible}
                   id={item.bible}

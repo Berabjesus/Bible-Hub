@@ -11,7 +11,6 @@ const Navbar = () => {
   const [sideBar, setSidebar] = React.useState('slideLeft');
   const [searchIcon, setSearchIcon] = React.useState(faSearch);
   const [settingIcon, setSettingIcon] = React.useState(faCog);
-
   const searchClickHandler = () => {
     if (searchBar === 'd-flex') {
       setSearchBar('d-none');
