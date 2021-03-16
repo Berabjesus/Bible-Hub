@@ -45,6 +45,7 @@ const Sidebar = ({ id, setInfo }) => {
     console.log(id, chapter);
     dispatch(fetchContent(id, chapter));
     setInfo(chapter)
+    handleToggle()
   };
 
   return (

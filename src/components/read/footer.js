@@ -1,9 +1,9 @@
 import React from "react";
-import panelCss from "./panel.module.css";
+import footerCss from "./footer.module.css";
 import { faStar as faStarUnchecked } from "@fortawesome/free-regular-svg-icons";
 import { faStar as faStarChecked } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const Panel = () => {
+const Footer = () => {
   const [favorite, setFavorite] = React.useState(faStarUnchecked);
   const handleFavoriteCheck = () => {
     favorite === faStarUnchecked
@@ -11,8 +11,8 @@ const Panel = () => {
       : setFavorite(faStarUnchecked);
   };
   return (
-    <div className={`d-flex align-items-center ${panelCss.bottom}`}>
-      <button className={`mx-auto ${panelCss.button}`}  onClick={handleFavoriteCheck}>
+    <div className={`d-flex align-items-center ${footerCss.bottom}`}>
+      <button className={`mx-auto ${footerCss.button}`}  onClick={handleFavoriteCheck}>
         <FontAwesomeIcon
           icon={favorite}
           style={{ color: "White", fontSize: "25px" }}
@@ -23,4 +23,4 @@ const Panel = () => {
   );
 };
 
-export default Panel;
+export default Footer;
