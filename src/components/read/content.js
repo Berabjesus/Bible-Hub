@@ -2,37 +2,44 @@ import React, { createRef } from 'react';
 import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
 import contentCss from './content.module.css';
-
+import { RotateSpinner } from 'react-spinners-kit';
+import ToolTip from './tooltip'
 const Content = ({info}) => {
   const contentBgColor = useSelector(state => state.darkMode);
   const data = useSelector(state => state.content);
-  const [popupProps, setPopupProps] = React.useState({position: 'absolute', display: 'none',top: 0, right: 0})
+  const [toolTipProps, setToolTipProps] = React.useState({position: 'absolute', display: 'none',top: 0, right: 0})
 
-  const popupHandle = (top, left) => {
-    if (popupProps.right === left && popupProps.top === top) {
-      popupProps.display === 'flex' ? setPopupProps({...popupProps, display: 'none'}) : setPopupProps({...popupProps, display: 'flex'})
+  const toolTipHandle = (top, left) => {
+    if (toolTipProps.right === left && toolTipProps.top ===  `${top - 25}px`) {
+      toolTipProps.display === 'flex' ? setToolTipProps({...toolTipProps, display: 'none'}) : setToolTipProps({...toolTipProps, display: 'flex'})
     } else {
-      setPopupProps({...popupProps, display: 'flex', top: top, right: left})
+      setToolTipProps({...toolTipProps, display: 'flex', top: `${top - 25}px`, right: left})
     }
   }
   return (
     <article className={`pl-3 pr-1 ${contentCss.article}`} style={contentBgColor}>
-      {
+      {data.loading ? (
+        <span className={`${contentCss.centered}`}>
+          <RotateSpinner size={80} color={contentBgColor.color} loading />
+          ;
+        </span>
+      )
+        : data.error.length > 0 ? (
+          <span className={`${contentCss.centered}`} style={{color: contentBgColor.color}}>
+            <h3>Error fetching data, Try again later</h3>
+          </span>
+        ) : 
+        (
         data.content.text && (
         <div className='position-relative'>
-          <div style={popupProps}>
-            <h1>test</h1>
-          </div>
+          <ToolTip style={toolTipProps} />
           {parse(data.content.text, {
             replace: function(domNode) {
-              if (domNode.type === 'tag' && domNode.name === 'p') {
+              if (domNode.type === 'tag' && domNode.name === 'p' && domNode.children.length > 3) {
                 let verse = {...{...domNode.children[2].children}['0']}.data
                 let verseNum = {...{...domNode.children[1].children[0].children}['0']}.data
-                return <p onClick={(e)=> {
-                  // e.target.classList.add(contentCss.focus)
-                  // console.log(e.target);
-                  // e.target.appendChild(append)
-                  popupHandle(e.target.offsetTop, e.target.offsetLeft)
+                return <p className={`${contentCss.focus}`} onClick={(e)=> {
+                  toolTipHandle(e.target.offsetTop, e.target.offsetLeft)
                 }}><sup>{verseNum}</sup>{verse}
 
                 </p>
@@ -48,6 +55,7 @@ const Content = ({info}) => {
             }
             })}
         </div>
+          )
         )
       }
     </article>
