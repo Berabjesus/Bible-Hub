@@ -33,3 +33,7 @@ main {
 .font-josefin {
   font-family: 'Josefin Sans','Courier New', Courier, monospace;
 }
+
+.button_noBg {
+  background: unset;
+}

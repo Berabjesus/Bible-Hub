@@ -1,19 +1,23 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import sideBarCss from './sidebar.module.css';
 import { setDark, setLite } from '../../actions/darkModeAction';
 
-export const SideBar = ({ slide }) => {
+const SideBar = ({ slide }) => {
   const [ulState, setUlState] = React.useState('d-none');
   const contentBgColor = useSelector(state => state.darkMode);
   const dispatch = useDispatch();
-  React.useEffect(() => {
-    slide === 'slideLeft' ? setUlState('d-none') : setUlState('d-block');
-  }, [slide]);
+
+  React.useEffect(() => (slide === 'slideLeft' ? setUlState('d-none') : setUlState('d-block')), [slide]);
 
   const handleDarkModeToggle = () => {
-    dispatch(contentBgColor.background === 'white' ? setDark('#100C1A') : setLite());
+    if (contentBgColor.background === 'white') {
+      dispatch(setDark('#100C1A'));
+    } else {
+      dispatch(setLite());
+    }
   };
 
   return (
@@ -37,6 +41,10 @@ export const SideBar = ({ slide }) => {
       </ul>
     </aside>
   );
+};
+
+SideBar.propTypes = {
+  slide: PropTypes.string.isRequired,
 };
 
 export default SideBar;

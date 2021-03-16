@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import imageCss from './image.module.css';
 
 const Image = ({ image, title }) => (
@@ -10,11 +11,16 @@ const Image = ({ image, title }) => (
     <div className="w-100 h-100 position-absolute">
       <img
         src={image}
-        alt={`${title} image`}
+        alt={`${title}`}
         className={`w-100 h-100 ${imageCss.img}`}
       />
     </div>
   </>
 );
+
+Image.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default Image;

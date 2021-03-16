@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Error = () => (
+const Error = () => (
   <div>
     <h1>Error Page</h1>
   </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import store from '../store';
-import Home from '../pages/home';
-import Bible from '../pages/bible';
-import Read from '../pages/read';
-import About from '../pages/about';
-import Error from '../pages/error';
-import Navbar from './common/navbar';
+import store from './store';
+import Home from './pages/home';
+import Bible from './pages/bible';
+import Read from './pages/read';
+import About from './pages/about';
+import Error from './pages/error';
+import Navbar from './components/common/navbar';
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import itemCss from './item.module.css';
 
 const Item = ({
@@ -22,7 +23,7 @@ const Item = ({
     />
     <img
       src={image}
-      alt={`${title} image`}
+      alt={`${title}`}
       className={`${itemCss.image} mx-auto`}
     />
     <div className={`d-flex flex-column w-100 py-1 font-josefin ${itemCss.description} `}>
@@ -31,4 +32,13 @@ const Item = ({
     </div>
   </Link>
 );
+
+Item.propTypes = {
+  id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 export default Item;

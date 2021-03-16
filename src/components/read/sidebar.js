@@ -1,8 +1,10 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RotateSpinner } from 'react-spinners-kit';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import sidebarCss from './sidebar.module.css';
 import { fetchPassages } from '../../actions/passagesAction';
 import { fetchContent } from '../../actions/contentAction';
@@ -15,11 +17,8 @@ const Sidebar = ({ id, setInfo }) => {
 
   const dispatch = useDispatch();
   const data = useSelector(state => state.passage);
-  console.log(data);
 
   React.useEffect(() => {
-    console.log('chapert name load');
-
     dispatch(fetchPassages(id));
   }, []);
 
@@ -42,50 +41,64 @@ const Sidebar = ({ id, setInfo }) => {
   };
 
   const handleChapterClick = (id, chapter) => {
-    console.log(id, chapter);
     dispatch(fetchContent(id, chapter));
-    setInfo(chapter)
-    handleToggle()
+    setInfo(chapter);
+    handleToggle();
   };
 
   return (
-    <aside className={`row d-flex pb-5 ${sidebarCss.aside} ${sidebarCss[slide]}`}>
-      <div className={`flex-column text-white col-9 ${sidebarCss.passage} ${contentState}`}>
+    <aside
+      className={`row d-flex pb-5 ${sidebarCss.aside} ${sidebarCss[slide]}`}
+    >
+      <div
+        className={`flex-column text-white col-9 ${sidebarCss.passage} ${contentState}`}
+      >
         <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">
-          {id}Books
+          {id}
+          Books
         </small>
 
-        {
-          data.loading && !data.stored
-            ? (
-              <span className={`${sidebarCss.centered}`}>
-                <RotateSpinner size={60} color="white" loading />
-              </span>
-            )
-            : data.error.length > 0 ? (
-              <span className="text-white centered">
-                <h3>Error fetching data, Try again later</h3>
-              </span>
-            )
-              : (
-                data.passages.books && data.passages.books.map(item => (
-                  <button key={`${id}-${item.passage}`} className={`${sidebarCss.button}`} onClick={() => handlePassageClick(item.chapters)}>
-                    {item.passage}
-                  </button>
-                ))
-              )
-
-        }
+        {data.loading && !data.stored ? (
+          <span className={`${sidebarCss.centered}`}>
+            <RotateSpinner size={60} color="white" loading />
+          </span>
+        ) : data.error.length > 0 ? (
+          <span className="text-white centered">
+            <h3>Error fetching data, Try again later</h3>
+          </span>
+        ) : (
+          data.passages.books
+          && data.passages.books.map(item => (
+            <button
+              type="button"
+              key={`${id}-${item.passage}`}
+              className={`${sidebarCss.button}`}
+              onClick={() => handlePassageClick(item.chapters)}
+            >
+              {item.passage}
+            </button>
+          ))
+        )}
       </div>
       <div
         className={`col-3 flex-column text-white text-center border-left border-light px-1 ${contentState} ${sidebarCss.passage}`}
       >
-        <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">Ch</small>
-        {
-          chapters.map((chapter, index) => <button key={`${chapter}-${index}`} className={`${sidebarCss.button}`} onClick={() => handleChapterClick(id, chapter.passage)}>{index + 1}</button>)
-        }
+        <small className="mx-auto mb-1 pb-1 border-bottom w-100 text-center">
+          Ch
+        </small>
+        {chapters.map((chapter, index) => (
+          <button
+            type="button"
+            key={`${chapter}-${chapter.passage.slice(-2)}`}
+            className={`${sidebarCss.button}`}
+            onClick={() => handleChapterClick(id, chapter.passage)}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
       <button
+        type="button"
         className={` align-self-center ${sidebarCss.toggle}`}
         onClick={handleToggle}
       >
@@ -96,6 +109,11 @@ const Sidebar = ({ id, setInfo }) => {
       </button>
     </aside>
   );
+};
+
+Sidebar.propTypes = {
+  id: PropTypes.string.isRequired,
+  setInfo: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

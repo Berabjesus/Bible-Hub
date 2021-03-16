@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RotateSpinner } from 'react-spinners-kit';
@@ -83,7 +84,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* {data.loading ? (
+      {data.loading ? (
         <span className={`${homeCss.centered}`}>
           <RotateSpinner size={80} color="white" loading />
           ;
@@ -107,22 +108,20 @@ const Home = () => {
                 />
               ))}
             </div>
-          )} */}
-
+          )}
+      {/*
       <div className={`row align-items-start ${homeCss.main}`}>
-          {sample && sample.map((item) => {
-            return (
-              <Item
-                key={item.bible}
-                id={item.abbreviatedTitle}
-                description={item.description}
-                image={item.imageUrl}
-                title={item.title}
-                languages={item.languages}
-              />
-            );
-          })}
-        </div>
+        {sample && sample.map(item => (
+          <Item
+            key={item.bible}
+            id={item.abbreviatedTitle}
+            description={item.description}
+            image={item.imageUrl}
+            title={item.title}
+            languages={item.languages}
+          />
+        ))}
+      </div> */}
     </div>
   );
 };

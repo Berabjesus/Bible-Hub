@@ -1,24 +1,51 @@
 import React from "react";
-import footerCss from "./footer.module.css";
-import { faStar as faStarUnchecked } from "@fortawesome/free-regular-svg-icons";
-import { faStar as faStarChecked } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { faMoon as faMoonUnchecked} from "@fortawesome/free-regular-svg-icons";
+import {
+  faHome,
+  faList,
+  faMoon as faMoonChecked
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import footerCss from "./footer.module.css";
+
 const Footer = () => {
-  const [favorite, setFavorite] = React.useState(faStarUnchecked);
-  const handleFavoriteCheck = () => {
-    favorite === faStarUnchecked
-      ? setFavorite(faStarChecked)
-      : setFavorite(faStarUnchecked);
-  };
+  const darkModeState = useSelector((state) => state.darkMode);
+
+  const dispatch = useDispatch();
+  const handledarkModeCheck = () => {
+    console.log('d');
+  }
+    
+      
   return (
-    <div className={`d-flex align-items-center ${footerCss.bottom}`}>
-      <button className={`mx-auto ${footerCss.button}`}  onClick={handleFavoriteCheck}>
+    <div className={`d-flex justify-content-between pr-2 pl-1 align-items-center ${footerCss.bottom}`}>
+      <button
+        type="button"
+        className={`${footerCss.button}`}
+        onClick={handledarkModeCheck}
+      >
         <FontAwesomeIcon
-          icon={favorite}
+          icon={darkModeState.background ==='white' ? (faMoonUnchecked) : (faMoonChecked)}
           style={{ color: "White", fontSize: "25px" }}
         />
-        <small className="text-white d-block">Favorite</small>
+        <small className="text-white d-block">{darkModeState.background ==='white' ? 'Dark Mode' : 'Lite Mode'}</small>
       </button>
+      <Link to="/" className="d-flex flex-column align-items-center">
+        <FontAwesomeIcon
+          icon={faHome}
+          style={{ color: "White", fontSize: "25px" }}
+        />
+        <small>Home</small>
+      </Link>
+      <Link to="/favorites" className="d-flex flex-column align-items-center">
+        <FontAwesomeIcon
+          icon={faList}
+          style={{ color: "White", fontSize: "25px" }}
+        />
+        <small>List</small>
+      </Link>
     </div>
   );
 };

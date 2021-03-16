@@ -2,6 +2,7 @@ import React from 'react';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import headerCss from './headerAndFooter.module.css';
 
 const Header = ({ title, languages }) => (
@@ -18,5 +19,10 @@ const Header = ({ title, languages }) => (
     <strong>{languages}</strong>
   </header>
 );
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Header;

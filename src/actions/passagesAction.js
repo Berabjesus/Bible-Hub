@@ -15,8 +15,6 @@ export const passgaesFetchFail = data => ({
 });
 
 export const fetchPassages = version => dispatch => {
-  console.log('pass called');
-
   dispatch(passgaesLoading());
   fetch(
     `https://api.biblia.com/v1/bible/contents/${version}?key=fd37d8f28e95d3be8cb4fbc37e15e18e`,
@@ -27,7 +25,6 @@ export const fetchPassages = version => dispatch => {
       return data;
     })
     .catch(error => {
-      console.log(error.message);
       dispatch(passgaesFetchFail(error.message));
       return error;
     });
