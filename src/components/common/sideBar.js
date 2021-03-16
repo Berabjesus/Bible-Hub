@@ -29,23 +29,30 @@ const SideBar = ({ slide }) => {
         <li className="col-12 mb-5">
           <p>Settings</p>
         </li>
-        <li className="col-12">
+        <li className="col-12 border mb-1">
           <button type="button" className={`w-100 ${sideBarCss.button}`} onClick={handleDarkModeToggle}>
-            <span className="mr-2">Dark Mode</span>
+            <span className="mr-2">
+              {' '}
+              <small> Dark Mode </small>
+            </span>
             <FontAwesomeIcon
               icon={contentBgColor.background === 'white' ? (faMoonUnchecked) : (faMoonChecked)}
               style={{ color: 'White', fontSize: '18px' }}
             />
           </button>
         </li>
-        <li className="col-12">
-          <Link to="/favorites"> Favorites </Link>
+        <li className="col-12 border mb-1">
+          <Link to="/favorites">
+            {' '}
+            <small> Favorites </small>
+          </Link>
         </li>
-        <li className="col-12">
-          <Link to="/about"> About </Link>
-        </li>
-        <li className="col-12">
-          <button type="button" className={`w-100 ${sideBarCss.button}`}>Clear User Preference</button>
+        <li className="col-12 border mb-1">
+          <Link to="/about">
+            {' '}
+            <small> About </small>
+            {' '}
+          </Link>
         </li>
       </ul>
     </aside>

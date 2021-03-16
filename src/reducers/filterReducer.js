@@ -1,4 +1,3 @@
-/* eslint-disable*/
 const initialState = {
   filterValue: '',
 };
@@ -6,10 +5,9 @@ const initialState = {
 const filterReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'BIBLE_VERSIONS_FILTER': {
-      console.log('filter red called');
       return {
         ...state,
-        filterValue: action.payload ,
+        filterValue: action.payload,
       };
     }
     default:
@@ -17,4 +15,4 @@ const filterReducer = (state = initialState, action) => {
   }
 };
 
-export default filterReducer
+export default filterReducer;

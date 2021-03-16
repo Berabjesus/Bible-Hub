@@ -5,10 +5,9 @@ import searchbarCss from './searchbar.module.css';
 import filterBibles from '../../actions/filterAction';
 
 const SearchBar = ({ ShowHide }) => {
-  const [input, setInput] = React.useState('');
   const dispatch = useDispatch();
 
-  const searchHandler = () => {
+  const searchHandler = input => {
     dispatch(filterBibles(input.toLowerCase()));
   };
 
@@ -17,18 +16,11 @@ const SearchBar = ({ ShowHide }) => {
       className={`row mx-0 px-0 border col-12 ${ShowHide} form-group ${searchbarCss.display}`}
     >
       <input
-        className="col-9 py-1"
+        className="col-12 py-1"
         type="text"
         placeholder="Search for a version"
-        onChange={e => setInput(e.target.value)}
+        onChange={e => searchHandler(e.target.value)}
       />
-      <button
-        type="button"
-        className={`col-3 ${searchbarCss.button}`}
-        onClick={searchHandler}
-      >
-        Search
-      </button>
     </div>
   );
 };
