@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content read component matches the snapshot 1`] = `
+<article
+  className="pl-3 col-lg-8 mx-auto pr-1 article"
+  style={
+    Object {
+      "background": "white",
+      "color": "#100C1A",
+    }
+  }
+/>
+`;
