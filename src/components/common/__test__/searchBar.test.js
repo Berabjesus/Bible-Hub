@@ -2,36 +2,36 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import renderer from "react-test-renderer";
-import Navbar from "../navbar";
+import SearchBar from "../searchBar";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from '../../../store'
 
-describe("Navbar common component", () => {
+describe("Search bar common component", () => {
   it("matches the snapshot", () => {
     const component = renderer.create(
       <BrowserRouter>
         <Provider store={store}>
-          <Navbar />
+          <SearchBar ShowHide ={'test-class'}/>
         </Provider>
       </BrowserRouter>
     );
     expect(component).toMatchSnapshot();
   });
-  it("Renders the Navbar correctly", () => {
+  it("Renders the search bar correctly", () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
-          <Navbar />
+          <SearchBar ShowHide ={'test-class'}/>
         </Provider>
       </BrowserRouter>
     );
 
     expect(
-      screen.getByText((content, element) => {
+      screen.getByPlaceholderText((content, element) => {
         return (
-          element.tagName.toLowerCase() === "p" &&
-          content.includes("Bible Hub")
+          element.tagName.toLowerCase() === "input" &&
+          content.includes('Search for a version')
         );
       })
     );
