@@ -5,7 +5,7 @@ import Image from '../components/bible/image';
 import Header from '../components/bible/header';
 import Footer from '../components/bible/footer';
 
-export const User = ({ location }) => {
+export const Bible = ({ location }) => {
   const {
     id, description, image, title, languages,
   } = location && { ...location.state };
@@ -19,8 +19,8 @@ export const User = ({ location }) => {
   );
 };
 
-User.propTypes = {
+Bible.propTypes = {
   location: PropTypes.instanceOf(Object).isRequired,
 };
 
-export default User;
+export default Bible;
