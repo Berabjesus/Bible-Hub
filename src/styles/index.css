@@ -5,10 +5,6 @@
 *  CSS TABLE OF CONTENTS
 *
 *  1.0 - Global values
-*  2.0 - Naviagtion Bar
-*  3.0 - 
-*  4.0 - 
-*  5.0 - 
 */
 
 /* Global values */
@@ -44,4 +40,21 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-1);
+  border: 0.5px solid whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

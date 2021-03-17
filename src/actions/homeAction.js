@@ -16,7 +16,7 @@ export const biblesFetchFail = data => ({
 
 export const fetchBibles = () => dispatch => {
   dispatch(biblesLoading());
-  fetch('https://thingproxy.freeboard.io/fetch/http://api.biblia.com/v1/bible/find.txt?key=fd37d8f28e95d3be8cb4fbc37e15e18e')
+  fetch('https://thingproxy.freeboard.io/fetch/https://api.biblia.com/v1/bible/find?key=b549e5a24783d7026ee2203e9629254e', { mode: 'cors' })
     .then(response => response.json())
     .then(data => {
       dispatch(biblesFetchSuccess(data));

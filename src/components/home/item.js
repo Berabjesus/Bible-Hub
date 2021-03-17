@@ -22,6 +22,7 @@ const Item = ({
       style={{ background: `url(${image}) no-repeat center/cover` }}
     />
     <img
+      loading="lazy"
       src={image}
       alt={`${title}`}
       className={`${itemCss.image} mx-auto`}
