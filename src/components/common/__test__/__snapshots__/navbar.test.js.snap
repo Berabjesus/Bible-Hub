@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar common component matches the snapshot 1`] = `
+<header
+  className="row w-100 mx-0 position-fixed border-bottom-0"
+>
+  <nav
+    className="col-12 d-flex justify-content-between align-items-center px-2 py-2  + display"
+  >
+    <button
+      aria-hidden="true"
+      className="button_noBg"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-cog fa-w-16 "
+        data-icon="cog"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={
+          Object {
+            "color": "White",
+            "fontSize": "25px",
+          }
+        }
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <p
+        className="text-white h4 mb-0"
+      >
+        Bible Hub
+      </p>
+    </a>
+    <button
+      className="button_noBg"
+      href="#"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-search fa-w-16 "
+        data-icon="search"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "25px",
+          }
+        }
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+  </nav>
+  <div
+    className="row mx-0 px-0 border col-12 d-none form-group display"
+  >
+    <input
+      className="col-12 py-1"
+      onChange={[Function]}
+      placeholder="Search for a version"
+      type="text"
+    />
+  </div>
+  <aside
+    className="position-fixed d-flex flex-column aside slideLeft"
+  >
+    <ul
+      className="row d-none"
+    >
+      <li
+        className="col-12 mb-5"
+      >
+        <p>
+          Settings
+        </p>
+      </li>
+      <li
+        className="col-12 border mb-1"
+      >
+        <button
+          className="w-100 button"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="mr-2"
+          >
+            Dark Mode
+          </span>
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-moon fa-w-16 "
+            data-icon="moon"
+            data-prefix="far"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "color": "White",
+                "fontSize": "18px",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256zm0-464c12.985 0 25.689 1.201 38.016 3.478-54.76 31.163-91.693 90.042-91.693 157.554 0 113.848 103.641 199.2 215.252 177.944C402.574 433.964 344.366 464 279.135 464c-114.875 0-208-93.125-208-208s93.125-208 208-208z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        className="col-12 border mb-1"
+      >
+        <a
+          className="d-block w-100"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="col-12 border mb-1"
+      >
+        <a
+          className="d-block w-100"
+          href="/favorites"
+          onClick={[Function]}
+        >
+          Favorites
+        </a>
+      </li>
+      <li
+        className="col-12 border mb-1"
+      >
+        <a
+          className="d-block w-100"
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+      </li>
+    </ul>
+  </aside>
+</header>
+`;
