@@ -11,9 +11,7 @@ describe("About page", () => {
   it("matches the snapshot", () => {
     const component = renderer.create(
       <BrowserRouter>
-        <Provider store={store}>
           <About history= {{goBack: ()=>"test function"}}/>
-        </Provider>
       </BrowserRouter>
     );
     expect(component).toMatchSnapshot();
@@ -21,9 +19,7 @@ describe("About page", () => {
   it("Renders the About page correctly", () => {
     render(
       <BrowserRouter>
-        <Provider store={store}>
           <About history= {{goBack: ()=>"test function"}}/>
-        </Provider>
       </BrowserRouter>
     );
     expect(
