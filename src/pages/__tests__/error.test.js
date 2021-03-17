@@ -8,7 +8,7 @@ describe('Bible page', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>
-        <Error />
+        <Error history={{ goBack: () => 'test function' }} />
       </BrowserRouter>,
     );
     expect(component).toMatchSnapshot();

@@ -3,11 +3,11 @@
   z-index: 99;
   height: 100vh;
   padding: 2rem 0.5rem 0 0.5rem;
-  background: #100C1A;
+  background: #100c1a;
   transition: 0.2s all linear;
 }
 
-.aside  * {
+.aside * {
   color: white;
   text-align: left;
 }
@@ -23,9 +23,8 @@
   padding: 0;
 }
 
-
 .slideRight {
-  width: 50% ;
+  width: 50%;
 }
 
 .slideLeft {

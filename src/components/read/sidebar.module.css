@@ -30,14 +30,14 @@
   z-index: -1;
   top: 40%;
   right: -28px;
-  background: var(--dark-1);;
+  background: var(--dark-1);
   border: 2px solid white;
   border-left: 2px solid var(--dark-1);
   border-radius: 5px;
 }
 
 .slideRight {
-  width: 60% ;
+  width: 60%;
 }
 
 .slideLeft {

@@ -9,9 +9,22 @@
 
 /* Global values */
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-1);
+  border: 0.5px solid whitesmoke;
+}
+
 :root {
-  --dark-1: #100C1A;
-  --main-bg: #2F2F31;
+  --dark-1: #100c1a;
+  --main-bg: #2f2f31;
 }
 
 body {
@@ -27,34 +40,16 @@ main {
 }
 
 .font-josefin {
-  font-family: 'Josefin Sans','Courier New', Courier, monospace;
+  font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
 }
 
 .button_noBg {
   background: unset;
 }
 
-
 .centered {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--dark-1);
-  border: 0.5px solid whitesmoke;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
