@@ -4,8 +4,6 @@ import { render, screen } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import About from "../about";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from '../../store'
 
 describe("About page", () => {
   it("matches the snapshot", () => {
