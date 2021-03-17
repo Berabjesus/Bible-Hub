@@ -33,7 +33,6 @@ describe('content actions', () => {
   });
 });
 
-
 describe('content api call', () => {
   it('should return a fetched data', () => {
     const [arguemnt1, argument2] = ['kjv', 'john1']
