@@ -3,7 +3,7 @@ import {
 } from '../darkModeAction';
 
 describe('darkmode actions', () => {
-  it('should create an action object with dark mode content', () => {
+  it('should create an action object with Dark mode content', () => {
     const expectedAction = {
       type: 'DARK',
       payload: 'black'
@@ -11,11 +11,10 @@ describe('darkmode actions', () => {
     expect(setDark('black')).toEqual(expectedAction);
   });
 
-  it('should create an action object with appropriate content', () => {
+  it('should create an action object with Lite mode content', () => {
     const expectedAction = {
       type: 'LITE',
     };
     expect(setLite()).toEqual(expectedAction);
   });
-
 });
