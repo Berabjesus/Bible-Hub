@@ -12,8 +12,8 @@ describe('Home actions', () => {
 
   it('should return a success object with on fetch success with the correct payload', () => {
     const payload = {
-      bibles: [{test: 'test 1'},{test: 'test 2'}]
-    }
+      bibles: [{ test: 'test 1' }, { test: 'test 2' }],
+    };
 
     const expectedAction = {
       type: 'PASSAGE_FETCH_SUCCESS',
@@ -23,7 +23,7 @@ describe('Home actions', () => {
   });
 
   it('should return a failed object with on fetch success with the correct payload', () => {
-    const payload = 'Sample fecth error'
+    const payload = 'Sample fecth error';
 
     const expectedAction = {
       type: 'PASSAGE_FETCH_FAIL',
@@ -37,4 +37,4 @@ describe('content api call', () => {
   it('should return a fetched data', () => {
     expect(fetchPassages()).toBeInstanceOf(Object);
   });
-})
+});

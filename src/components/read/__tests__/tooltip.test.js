@@ -1,38 +1,36 @@
-import React from "react";
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
-import ToolTip from "../tooltip";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../../../store'
+import ToolTip from '../tooltip';
+import store from '../../../store';
 
-describe("ToolTip read component", () => {
-  it("matches the snapshot", () => {
+describe('ToolTip read component', () => {
+  it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>
         <Provider store={store}>
-          <ToolTip style = {{color: 'white'}}/>
+          <ToolTip style={{ color: 'white' }} />
         </Provider>
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     expect(component).toMatchSnapshot();
   });
-  it("Renders the ToolTip component correctly", () => {
+  it('Renders the ToolTip component correctly', () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
-          <ToolTip style = {{color: 'white'}}/>
+          <ToolTip style={{ color: 'white' }} />
         </Provider>
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     expect(
-      screen.getByText((content, element) => {
-        return (
-          element.tagName.toLowerCase() === "p" &&
-          content.includes('favorites')
-        );
-      })
+      screen.getByText((content, element) => (
+        element.tagName.toLowerCase() === 'p'
+          && content.includes('favorites')
+      )),
     );
   });
 });

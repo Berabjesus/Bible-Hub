@@ -5,7 +5,7 @@ import Image from '../components/bible/image';
 import Header from '../components/bible/header';
 import Footer from '../components/bible/footer';
 
-export const Bible = ({ location }) => {
+const Bible = ({ location }) => {
   const {
     id, description, image, title, languages,
   } = location && { ...location.state };

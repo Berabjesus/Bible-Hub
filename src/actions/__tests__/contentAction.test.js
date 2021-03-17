@@ -23,7 +23,7 @@ describe('content actions', () => {
   });
 
   it('should return a failed object with on fetch success with the correct payload', () => {
-    const payload = 'Sample fecth error'
+    const payload = 'Sample fecth error';
 
     const expectedAction = {
       type: 'CONTENT_FETCH_FAIL',
@@ -35,8 +35,7 @@ describe('content actions', () => {
 
 describe('content api call', () => {
   it('should return a fetched data', () => {
-    const [arguemnt1, argument2] = ['kjv', 'john1']
+    const [arguemnt1, argument2] = ['kjv', 'john1'];
     expect(fetchContent(arguemnt1, argument2)).toBeInstanceOf(Object);
   });
-})
-
+});
