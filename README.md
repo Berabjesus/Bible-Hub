@@ -4,15 +4,16 @@
 
 ## Live Demo
 
-[click to view a live demo of the project]()
+[click to view a live demo of the project](https://bible-hub.netlify.app/)
 
 ## Sample Screenshots
+
 #### Home
-![screenshot](./public/screenshot.png)
+![screenshot](./public/main.png)
 #### Lite Mode reading
-![screenshot](./public/screenshot2.png)
+![screenshot](./public/lite.JPG)
 #### Dark Mode reading
-![screenshot](./public/screenshot3.png)
+![screenshot](./public/dark.JPG)
 
 ## Built With
 
