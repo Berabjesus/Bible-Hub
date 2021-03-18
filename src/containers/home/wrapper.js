@@ -2,7 +2,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RotateSpinner } from 'react-spinners-kit';
-import Item from './item';
+import Item from '../../components/home/item';
 import { fetchBibles } from '../../actions/homeAction';
 
 const Wrapper = () => {

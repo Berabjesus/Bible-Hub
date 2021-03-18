@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
 import { RotateSpinner } from 'react-spinners-kit';
 import contentCss from './content.module.css';
-import ToolTip from './tooltip';
+import ToolTip from '../../components/read/tooltip';
 
 const Content = () => {
   const contentBgColor = useSelector(state => state.darkMode);

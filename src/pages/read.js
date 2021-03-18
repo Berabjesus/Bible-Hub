@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from '../components/read/sidebar';
-import Content from '../components/read/content';
-import Footer from '../components/read/footer';
+import Sidebar from '../containers/read/sidebar';
+import Content from '../containers/read/content';
+import Footer from '../containers/read/footer';
 
 const Read = () => {
   const [verseInfo, setVerseInfo] = React.useState('');

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Wrapper from '../components/bible/wrapper';
+import Wrapper from '../containers/bible/wrapper';
 
 const Bible = ({ location }) => (
   <Wrapper location={location} />

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { faCog, faSearch, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import navbarCss from './navbar.module.css';
-import SearchBar from './searchBar';
-import SideBar from './sideBar';
+import SearchBar from '../../containers/navbar/searchBar';
+import SideBar from '../../containers/navbar/sideBar';
 
 const Navbar = () => {
   const [searchBar, setSearchBar] = React.useState('d-none');

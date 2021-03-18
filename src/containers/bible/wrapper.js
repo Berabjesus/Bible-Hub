@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RotateSpinner } from 'react-spinners-kit';
 import PropTypes from 'prop-types';
 import wrapperCss from './wrapper.module.css';
-import Image from './image';
-import Header from './header';
-import Footer from './footer';
+import Image from '../../components/bible/image';
+import Header from '../../components/bible/header';
+import Footer from '../../components/bible/footer';
 import { fetchBibles } from '../../actions/homeAction';
 
 const Wrapper = ({ location }) => {

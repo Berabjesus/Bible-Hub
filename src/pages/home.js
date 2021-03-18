@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper from '../components/home/wrapper';
+import Wrapper from '../containers/home/wrapper';
 
 const Home = () => (
   <Wrapper />
