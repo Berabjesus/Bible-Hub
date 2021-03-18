@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Favorites page -  matches the snapshot 1`] = `
+<div
+  className="centered d-flex flex-column align-items-center"
+>
+  <h2
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    Purchase the Full version to store favorite content
+  </h2>
+  <button
+    className="d-flex mx-auto button_noBg text-white mt-3 border p-2"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-arrow-left fa-w-14 "
+      data-icon="arrow-left"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={
+        Object {
+          "color": "White",
+          "fontSize": "25px",
+        }
+      }
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+    <p
+      className="ml-2"
+    >
+      Go back
+    </p>
+  </button>
+</div>
+`;
+
 exports[`Favorites page matches the snapshot 1`] = `
 <div
   className="centered d-flex flex-column align-items-center"

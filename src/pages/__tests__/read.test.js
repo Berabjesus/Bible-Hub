@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Read from '../read';
 import store from '../../store';
 
-describe('Read page', () => {
+describe('Read page - ', () => {
   it('matches the snapshot', () => {
     const location = {
       state: {

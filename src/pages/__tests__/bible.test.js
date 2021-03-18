@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Bible from '../bible';
 import store from '../../store';
 
-describe('Bible page', () => {
+describe('Bible page - ', () => {
   it('matches the snapshot', () => {
     const location = {
       state: {

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Sidebar from '../sidebar';
 import store from '../../../store';
 
-describe('Sidebar read component', () => {
+describe('Sidebar read component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

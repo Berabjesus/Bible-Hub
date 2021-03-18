@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import Item from '../item';
 import store from '../../../store';
 
-describe('Item Home component', () => {
+describe('Item Home component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

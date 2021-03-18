@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../header';
 
-describe('Header bible component', () => {
+describe('Header bible component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

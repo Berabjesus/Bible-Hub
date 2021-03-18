@@ -2,7 +2,7 @@ import {
   contentLoading, contentFetchSuccess, contentFetchFail, fetchContent,
 } from '../contentAction';
 
-describe('content actions', () => {
+describe('content actions - ', () => {
   it('should create an action to show the loading spinner in the bible content', () => {
     const expectedAction = {
       type: 'CONTENT_FETCH_REQUEST',

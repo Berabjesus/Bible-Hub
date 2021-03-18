@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import SideBar from '../sideBar';
 import store from '../../../store';
 
-describe('Side bar common component', () => {
+describe('Side bar common component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

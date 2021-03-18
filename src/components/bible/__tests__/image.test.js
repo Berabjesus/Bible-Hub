@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Image from '../image';
 
-describe('Image bible component', () => {
+describe('Image bible component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

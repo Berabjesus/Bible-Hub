@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from '../footer';
 
-describe('Footer bible component', () => {
+describe('Footer bible component - ', () => {
   it('matched the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

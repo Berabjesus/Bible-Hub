@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Footer from '../footer';
 import store from '../../../store';
 
-describe('Footer read component', () => {
+describe('Footer read component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

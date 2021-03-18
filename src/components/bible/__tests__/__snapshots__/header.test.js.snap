@@ -1,31 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar read component matches the snapshot 1`] = `
-<aside
-  className="row d-flex pb-5 aside slideRight"
+exports[`Header bible component -  matches the snapshot 1`] = `
+<header
+  className="d-flex justify-content-between align-items-center px-2 py-1 font-josefin header"
 >
-  <div
-    className="flex-column text-white col-9 passage d-flex"
-  >
-    <small
-      className="mx-auto mb-1 pb-1 border-bottom w-100 text-center"
-    >
-      Books
-    </small>
-  </div>
-  <div
-    className="col-3 flex-column text-white text-center border-left border-light px-1 d-flex passage"
-  >
-    <small
-      className="mx-auto mb-1 pb-1 border-bottom w-100 text-center"
-    >
-      Ch
-    </small>
-  </div>
-  <button
-    className=" align-self-center toggle"
+  <a
+    href="/"
     onClick={[Function]}
-    type="button"
   >
     <svg
       aria-hidden="true"
@@ -37,7 +18,7 @@ exports[`Sidebar read component matches the snapshot 1`] = `
       style={
         Object {
           "color": "White",
-          "fontSize": "15px",
+          "fontSize": "25px",
         }
       }
       viewBox="0 0 448 512"
@@ -49,6 +30,13 @@ exports[`Sidebar read component matches the snapshot 1`] = `
         style={Object {}}
       />
     </svg>
-  </button>
-</aside>
+  </a>
+  <strong>
+    test title
+  </strong>
+  <strong>
+    test language1
+    test languages 2
+  </strong>
+</header>
 `;

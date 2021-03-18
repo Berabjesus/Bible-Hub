@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import SearchBar from '../searchBar';
 import store from '../../../store';
 
-describe('Search bar common component', () => {
+describe('Search bar common component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

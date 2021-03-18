@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Content from '../content';
 import store from '../../../store';
 
-describe('Content read component', () => {
+describe('Content read component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

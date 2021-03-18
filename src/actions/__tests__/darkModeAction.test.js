@@ -2,7 +2,7 @@ import {
   setDark, setLite,
 } from '../darkModeAction';
 
-describe('darkmode actions', () => {
+describe('darkmode actions - ', () => {
   it('should create an action object with Dark mode content', () => {
     const expectedAction = {
       type: 'DARK',

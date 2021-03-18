@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import Navbar from '../navbar';
 import store from '../../../store';
 
-describe('Navbar common component', () => {
+describe('Navbar common component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

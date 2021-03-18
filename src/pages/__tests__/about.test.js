@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import About from '../about';
 
-describe('About page', () => {
+describe('About page - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

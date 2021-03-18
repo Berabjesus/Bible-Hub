@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import ToolTip from '../tooltip';
 import store from '../../../store';
 
-describe('ToolTip read component', () => {
+describe('ToolTip read component - ', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

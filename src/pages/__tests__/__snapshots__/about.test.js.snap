@@ -1,29 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar read component -  matches the snapshot 1`] = `
-<aside
-  className="row d-flex pb-5 aside slideRight"
+exports[`About page -  matches the snapshot 1`] = `
+<article
+  className="centered text-white w-100 text-center"
 >
-  <div
-    className="flex-column text-white col-9 passage d-flex"
-  >
-    <small
-      className="mx-auto mb-1 pb-1 border-bottom w-100 text-center"
-    >
-      Books
-    </small>
-  </div>
-  <div
-    className="col-3 flex-column text-white text-center border-left border-light px-1 d-flex passage"
-  >
-    <small
-      className="mx-auto mb-1 pb-1 border-bottom w-100 text-center"
-    >
-      Ch
-    </small>
-  </div>
+  <h2>
+    Bible Hub web application
+  </h2>
+  <p>
+    Created by Bereket A. Beshane
+  </p>
+  <p>
+    Content from https://api.biblia.com
+  </p>
   <button
-    className=" align-self-center toggle"
+    className="d-flex mx-auto button_noBg text-white mt-3 border p-2"
     onClick={[Function]}
     type="button"
   >
@@ -37,7 +28,7 @@ exports[`Sidebar read component -  matches the snapshot 1`] = `
       style={
         Object {
           "color": "White",
-          "fontSize": "15px",
+          "fontSize": "25px",
         }
       }
       viewBox="0 0 448 512"
@@ -49,6 +40,11 @@ exports[`Sidebar read component -  matches the snapshot 1`] = `
         style={Object {}}
       />
     </svg>
+    <p
+      className="ml-2"
+    >
+      Go back
+    </p>
   </button>
-</aside>
+</article>
 `;

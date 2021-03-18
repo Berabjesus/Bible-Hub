@@ -2,7 +2,7 @@ import {
   biblesLoading, biblesFetchSuccess, biblesFetchFail, fetchBibles,
 } from '../homeAction';
 
-describe('Home actions', () => {
+describe('Home actions - ', () => {
   it('should create an action to show the loading spinner in the index page', () => {
     const expectedAction = {
       type: 'BIBLE_VERSIONS_FETCH_REQUEST',

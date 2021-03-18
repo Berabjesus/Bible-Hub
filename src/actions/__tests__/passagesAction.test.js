@@ -2,7 +2,7 @@ import {
   passgaesLoading, passgaesFetchSuccess, passgaesFetchFail, fetchPassages,
 } from '../passagesAction';
 
-describe('Home actions', () => {
+describe('Home actions - ', () => {
   it('should create an action to show the loading spinner in the content sidebar', () => {
     const expectedAction = {
       type: 'PASSAGE_FETCH_REQUEST',
