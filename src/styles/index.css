@@ -1,0 +1,55 @@
+@import url('./reset.css');
+@import url('./fonts.css');
+
+/*
+*  CSS TABLE OF CONTENTS
+*
+*  1.0 - Global values
+*/
+
+/* Global values */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-1);
+  border: 0.5px solid whitesmoke;
+}
+
+:root {
+  --dark-1: #100c1a;
+  --main-bg: #2f2f31;
+}
+
+body {
+  background-color: var(--dark-1);
+}
+
+main {
+  padding: 41px 0 0 0;
+}
+
+.border_custom {
+  border: 3px dashed red;
+}
+
+.font-josefin {
+  font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
+}
+
+.button_noBg {
+  background: unset;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

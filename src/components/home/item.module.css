@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  height: 40vh;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 1px 1px 10px rgb(43, 42, 42);
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.image {
+  object-fit: contain;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  padding: 0 0.3rem;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-top: 1px solid black;
+}
+
+.description > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .description > p {
+    -webkit-line-clamp: 1;
+  }
+}

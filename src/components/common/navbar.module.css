@@ -1,0 +1,9 @@
+header {
+  top: 0;
+  z-index: 299;
+}
+
+.display {
+  background-color: var(--dark-1);
+  font-family: 'Redressed', cursive;
+}

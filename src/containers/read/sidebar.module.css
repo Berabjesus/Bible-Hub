@@ -1,0 +1,59 @@
+.aside {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  transition: 0.2s all linear;
+  background: var(--dark-1);
+  border-right: 2px solid white;
+}
+
+.passage {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.button {
+  color: whitesmoke;
+  background: unset;
+  border: 1px solid rgba(245, 245, 245, 0.171);
+  padding: 0 0 0.2rem 0;
+  margin: 0.2rem 0 0 0;
+}
+
+.button:focus {
+  color: var(--dark-1);
+  background: whitesmoke;
+}
+
+.toggle {
+  position: absolute;
+  z-index: -1;
+  top: 40%;
+  right: -28px;
+  background: var(--dark-1);
+  border: 2px solid white;
+  border-left: 2px solid var(--dark-1);
+  border-radius: 5px;
+}
+
+.slideRight {
+  width: 60%;
+}
+
+.slideLeft {
+  width: 0;
+  padding: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .slideRight {
+    width: 30%;
+  }
+}

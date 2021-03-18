@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Home component -  matches the snapshot 1`] = `
+<a
+  className="d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 wrapper "
+  href="/bible/test-id"
+  onClick={[Function]}
+>
+  <div
+    className="w-100 h-100 background"
+    style={
+      Object {
+        "background": "url(test-imageUrl) no-repeat center/cover",
+      }
+    }
+  />
+  <img
+    alt="test-title"
+    className="imageUrl mx-auto"
+    loading="lazy"
+    src="test-imageUrl"
+  />
+  <div
+    className="d-flex flex-column w-100 py-1 font-josefin description "
+  >
+    <h4>
+      test-title
+    </h4>
+    <p>
+      test-description
+    </p>
+  </div>
+</a>
+`;
+
+exports[`Item Home component matches the snapshot 1`] = `
+<a
+  className="d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 wrapper "
+  href="/bible/test-id"
+  onClick={[Function]}
+>
+  <div
+    className="w-100 h-100 background"
+    style={
+      Object {
+        "background": "url(test-imageUrl) no-repeat center/cover",
+      }
+    }
+  />
+  <img
+    alt="test-title"
+    className="imageUrl mx-auto"
+    loading="lazy"
+    src="test-imageUrl"
+  />
+  <div
+    className="d-flex flex-column w-100 py-1 font-josefin description "
+  >
+    <h4>
+      test-title
+    </h4>
+    <p>
+      test-description
+    </p>
+  </div>
+</a>
+`;
