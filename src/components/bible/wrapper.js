@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary, max-len */
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
