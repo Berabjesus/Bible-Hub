@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Favorites from '../favorites';
 
-describe('Bible page', () => {
+describe('Favorites page', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

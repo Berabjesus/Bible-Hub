@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Home from '../home';
 import store from '../../store';
 
-describe('Bible page', () => {
+describe('Home page', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

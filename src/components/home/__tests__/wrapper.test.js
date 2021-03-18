@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../../../store';
 import Wrapper from '../wrapper';
 
-describe('Bible page', () => {
+describe('Wrapper page', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>

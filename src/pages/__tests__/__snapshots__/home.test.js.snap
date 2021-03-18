@@ -7,3 +7,11 @@ exports[`Bible page matches the snapshot 1`] = `
   />
 </div>
 `;
+
+exports[`Home page matches the snapshot 1`] = `
+<div>
+  <div
+    className="row align-items-start"
+  />
+</div>
+`;

@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Error from '../error';
 
-describe('Bible page', () => {
+describe('Error page', () => {
   it('matches the snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>
