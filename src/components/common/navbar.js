@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <header className="row w-100 mx-0 position-fixed border-bottom-0">
       <nav className={`col-12 d-flex justify-content-between align-items-center px-2 py-2  + ${navbarCss.display}`}>
-        <button type="button" className="button_noBg" onClick={settingsClickHandler} aria-hidden="true"><FontAwesomeIcon icon={settingIcon} style={{ color: 'White', fontSize: '25px' }} /></button>
+        <button type="button" className="button_noBg" onClick={settingsClickHandler} aria-label="Setting" aria-hidden="true"><FontAwesomeIcon icon={settingIcon} style={{ color: 'White', fontSize: '25px' }} /></button>
         <Link to="/"><p className="text-white h4 mb-0">Bible Hub</p></Link>
         <button type="button" className="button_noBg" href="#" onClick={searchClickHandler}>
           <FontAwesomeIcon icon={searchIcon} style={{ color: 'white', fontSize: '25px' }} />
