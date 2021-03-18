@@ -3,22 +3,22 @@
 exports[`Item Home component matches the snapshot 1`] = `
 <a
   className="d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 wrapper "
-  href="/bible"
+  href="/bible/test-id"
   onClick={[Function]}
 >
   <div
     className="w-100 h-100 background"
     style={
       Object {
-        "background": "url(test-image) no-repeat center/cover",
+        "background": "url(test-imageUrl) no-repeat center/cover",
       }
     }
   />
   <img
     alt="test-title"
-    className="image mx-auto"
+    className="imageUrl mx-auto"
     loading="lazy"
-    src="test-image"
+    src="test-imageUrl"
   />
   <div
     className="d-flex flex-column w-100 py-1 font-josefin description "

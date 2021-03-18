@@ -17,8 +17,9 @@ function App() {
       <main className="mt-1">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/bible" component={Bible} />
-          <Route path="/read" component={Read} />
+          <Route exact path="/home" component={Home} />
+          <Route path="/bible/:id" component={Bible} />
+          <Route path="/read/:bible" component={Read} />
           <Route path="/favorites" component={Favorites} />
           <Route path="/about" component={About} />
           <Route path="*" component={Error} />

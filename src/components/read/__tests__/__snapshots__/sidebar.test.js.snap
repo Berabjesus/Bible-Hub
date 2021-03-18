@@ -10,7 +10,6 @@ exports[`Sidebar read component matches the snapshot 1`] = `
     <small
       className="mx-auto mb-1 pb-1 border-bottom w-100 text-center"
     >
-      test-id
       Books
     </small>
   </div>

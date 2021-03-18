@@ -106,7 +106,7 @@ exports[`Bible page matches the snapshot 1`] = `
       </button>
       <a
         className="button"
-        href="/read"
+        href="/read/test"
         onClick={[Function]}
       >
         <svg

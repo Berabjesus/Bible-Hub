@@ -12,7 +12,7 @@ describe('Item Home component', () => {
     const component = renderer.create(
       <BrowserRouter>
         <Provider store={store}>
-          <Item id="test-id" description="test-description" image="test-image" title="test-title" languages={['test-languages-1', 'test-languages-2']} />
+          <Item id="test-id" description="test-description" imageUrl="test-imageUrl" title="test-title" languages={['test-languages-1', 'test-languages-2']} />
         </Provider>
       </BrowserRouter>,
     );
@@ -22,7 +22,7 @@ describe('Item Home component', () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
-          <Item id="test-id" description="test-description" image="test-image" title="test-title" languages={['test-languages-1', 'test-languages-2']} />
+          <Item id="test-id" description="test-description" imageUrl="test-imageUrl" title="test-title" languages={['test-languages-1', 'test-languages-2']} />
         </Provider>
       </BrowserRouter>,
     );

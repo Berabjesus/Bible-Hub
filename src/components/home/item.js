@@ -4,28 +4,28 @@ import PropTypes from 'prop-types';
 import itemCss from './item.module.css';
 
 const Item = ({
-  id, description, image, title, languages,
+  id, description, imageUrl, title, languages,
 }) => (
   <Link
     className={`d-flex col-12 col-sm-6 col-lg-4 p-0 m-0 ${itemCss.wrapper} `}
     to={
         {
-          pathname: '/bible',
+          pathname: `/bible/${id}`,
           state: {
-            id, description, image, title, languages,
+            id, description, imageUrl, title, languages,
           },
         }
       }
   >
     <div
       className={`w-100 h-100 ${itemCss.background}`}
-      style={{ background: `url(${image}) no-repeat center/cover` }}
+      style={{ background: `url(${imageUrl}) no-repeat center/cover` }}
     />
     <img
       loading="lazy"
-      src={image}
+      src={imageUrl}
       alt={`${title}`}
-      className={`${itemCss.image} mx-auto`}
+      className={`${itemCss.imageUrl} mx-auto`}
     />
     <div className={`d-flex flex-column w-100 py-1 font-josefin ${itemCss.description} `}>
       <h4>{title}</h4>
@@ -37,7 +37,7 @@ const Item = ({
 Item.propTypes = {
   id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

@@ -32,7 +32,7 @@ const Footer = ({ id, description }) => {
         </button>
         <Link
           to={{
-            pathname: '/read',
+            pathname: `/read/${id}`,
             state: { id },
           }}
           className={`${footerCss.button}`}

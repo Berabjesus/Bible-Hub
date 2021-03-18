@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RotateSpinner } from 'react-spinners-kit';
@@ -9,12 +10,13 @@ import sidebarCss from './sidebar.module.css';
 import { fetchPassages } from '../../actions/passagesAction';
 import { fetchContent } from '../../actions/contentAction';
 
-const Sidebar = ({ id, setInfo }) => {
+const Sidebar = ({ setInfo }) => {
   const [slide, setSlide] = React.useState('slideRight');
   const [contentState, setContentState] = React.useState('d-flex');
   const [arrowState, setArrowState] = React.useState(faArrowLeft);
   const [chapters, setChapters] = React.useState([]);
-
+  const params = useParams();
+  const id = params.bible;
   const dispatch = useDispatch();
   const data = useSelector(state => state.passage);
 
@@ -112,7 +114,6 @@ const Sidebar = ({ id, setInfo }) => {
 };
 
 Sidebar.propTypes = {
-  id: PropTypes.string.isRequired,
   setInfo: PropTypes.func.isRequired,
 };
 
