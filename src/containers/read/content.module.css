@@ -4,6 +4,7 @@
   padding: 10px 0 60px 0;
   overflow-y: auto;
   background: white;
+  border: 2px solid whitesmoke;
 }
 
 .focus:active {

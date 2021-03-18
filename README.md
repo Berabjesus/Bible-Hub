@@ -1,10 +1,14 @@
 # Bible Hub
 
-> Bible Hub is a single page application (SPA) that helps users get more than 20 different bible languages and versions and read each individual bible content verse by verse.
+> Bible Hub is a single page application (SPA) that helps users get more than 20 different bible languages and versions and read each individual bible content verse by verse. 
 
 ## Live Demo
 
 [click to view a live demo of the project](https://bible-hub.netlify.app/)
+
+## Project Specification
+
+[The project specification can be found here](https://www.notion.so/microverse/Catalogue-of-Recipes-ea589778a95f47fa98034d99d4016d2b)
 
 ## Sample Screenshots
 
