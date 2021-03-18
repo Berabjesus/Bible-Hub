@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../../store';
+import store from '../../../store';
 import Wrapper from '../wrapper';
 
 describe('Bible page', () => {
