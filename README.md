@@ -34,7 +34,7 @@
 - html-react-parser
 - prop-types
 - Fontawesome 
-- 
+
 ### Setup
 
 Clone the repo with
