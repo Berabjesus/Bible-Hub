@@ -35,7 +35,7 @@
 - prop-types
 - Fontawesome 
 
-### Setup
+## Setup
 
 Clone the repo with
 
