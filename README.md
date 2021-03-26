@@ -55,7 +55,7 @@ Start server with:
   npm start
 ```
 
-The app wil open in your default browser.
+The app will open in your default browser.
 
 
 ## Test
