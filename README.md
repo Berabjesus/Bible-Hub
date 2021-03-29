@@ -1,6 +1,6 @@
 # Bible Hub
 
-> Bible Hub is a single page application (SPA) that helps users get more than 25 different bible languages and versions and read each individual bible content verse by verse. 
+> Bible Hub is a single page application (SPA) built with React that helps users get more than 25 different bible languages and versions and read each individual bible content verse by verse. 
 
 ## Live Demo
 
